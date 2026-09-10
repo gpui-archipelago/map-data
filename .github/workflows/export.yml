@@ -1,0 +1,90 @@
+name: export
+
+# Export the fork-map data family from the gpui-corpus measured dataset.
+#
+# The generator is the *published* `cargo-gocar` — data-agnostic, it carries no
+# curated gpui data. This job checks out the public gpui-corpus repo twice
+# (`measured` for the dataset, `main` for `curation/`), runs
+# `export-fork-map`, and commits the deterministic `gocar.forkmap.v1` family
+# (+ its sidecars) into this repo's `data/`.
+#
+# `map` consumes this directory; it never runs the exporter.
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Mondays, after the daily corpus + measure runs
+  workflow_dispatch:
+  # Future: repository_dispatch from gpui-corpus when `measured` moves. A
+  # cross-repo dispatch needs a PAT, so v1 relies on the schedule instead.
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fork-map-export
+  cancel-in-progress: false
+
+env:
+  # The exporter version this data was produced by. Bump deliberately: a new
+  # exporter can change the bundle shape, and the viewer's strict schema guard
+  # fails loudly on a skew rather than rendering misread data.
+  GOCAR_VERSION: "0.4.0"
+  CORPUS_REPO: "gpui-archipelago/gpui-corpus"
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out this repo (the data target)
+        uses: actions/checkout@v4
+
+      - name: Check out the measured dataset
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.CORPUS_REPO }}
+          ref: measured
+          path: corpus-measured
+
+      - name: Check out the curation inputs
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.CORPUS_REPO }}
+          ref: main
+          path: corpus-main
+
+      - name: Ensure a current Rust toolchain
+        run: rustup update stable && rustup default stable
+
+      - name: Install the export tool
+        run: cargo install cargo-gocar --version "$GOCAR_VERSION" --locked
+
+      - name: Export the fork-map family
+        run: |
+          set -o pipefail
+          rm -rf data
+          cargo-gocar \
+            --dataset corpus-measured/gpui-contract.json.xz \
+            --curation corpus-main/curation \
+            export-fork-map \
+            --out data/forkmap.json | tee -a "$GITHUB_STEP_SUMMARY"
+          du -sh data
+
+      - name: Sanity-check the exported family
+        run: |
+          for f in forkmap.json forkmap-manifest.json forkmap-alignment.json \
+                   forkmap-align-index.json forkmap-journal.json; do
+            test -f "data/$f" || { echo "missing data/$f"; exit 1; }
+          done
+          python3 -c "import json; b = json.load(open('data/forkmap.json')); assert b['schema'] == 'gocar.forkmap.v1', b['schema']; print(len(b['providers']), 'providers,', sum(len(p['versions']) for p in b['providers']), 'versions')"
+
+      - name: Commit and push the data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "fork-map data unchanged — nothing to commit"
+            exit 0
+          fi
+          git commit -m "data: export $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
