@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-09-16T18:21:02+00:00",
+  "dataset_synced_at": "2026-09-17T06:41:46+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -933,6 +933,12 @@
     "enum:ExternalDragPayload": {
       "71688d30c780256eac4f2f2c36c7af40e47c11e66821fcf16e73dde5da87e007": [
         "Files (  )"
+      ]
+    },
+    "enum:FallbackFontClass": {
+      "6554b73acf3ff1e7a454d86892847fbe34e801454fcdee9da489a6a1af9b2a0b": [
+        "Monospace",
+        "Proportional"
       ]
     },
     "enum:FileAssociationRole": {
@@ -6781,6 +6787,9 @@
     "struct:MessageDialogPlan": {
       "508e08a14ea4ebb527103127aeea65b83684194a2d6fe8dd18abc56d9454ad70": []
     },
+    "struct:MissingGlyph": {
+      "692130627edcaaf2373baadd0ad1a795035606f720e77f7ec235f66f22b1fa17": []
+    },
     "struct:Modal": {
       "2932fb75a66f39e47e1ff75a3c02e5be9bf5565dd905ded024174e59efbc22ea": []
     },
@@ -7823,6 +7832,9 @@
       "17d952d37c28085e0466cc344f08bd483fd3eee6cc7327a999509632aba46cc9": [
         "text : SharedString"
       ]
+    },
+    "struct:ShapedLineCursor": {
+      "5f367b460d27bfff185b9c16f13e4f4c388ff044cb93920bc2ac4964216ac519": []
     },
     "struct:ShapedRun": {
       "36f49019a040099ae0b3be6402d3cd3fb544b840b5061742fa3fec07a23987e9": [
@@ -13901,6 +13913,11 @@
     "trait:ManagedView": {
       "40db254f3c03c1f740d5dab6d993dc2d7011ffccba09ffa6c6936494fbb2e155": []
     },
+    "trait:MissingGlyphSink": {
+      "62acf6f1be828eb07e9a8ecb348093ee7deab98e5d589e3939245a8591b802c1": [
+        "fn report(& self, Vec < MissingGlyph >)"
+      ]
+    },
     "trait:MouseEvent": {
       "b586f9e04348d783fa5a95a9e0b77c41b544faadd713e4d3b34d60ae9374579e": []
     },
@@ -14805,6 +14822,22 @@
       ]
     },
     "trait:PlatformTextSystem": {
+      "0ea337f6265ebcd282d7e3fbd9deba138a39ea1d33b28095fdc22d85691f775e": [
+        "fn add_fonts(& self, Vec < Cow < 'static , [u8] > >)-> Result < () >",
+        "fn advance(& self, FontId, GlyphId)-> Result < Size < f32 > >",
+        "fn all_font_names(& self)-> Vec < String >",
+        "fn font_id(& self, & Font)-> Result < FontId >",
+        "fn font_metrics(& self, FontId)-> FontMetrics",
+        "fn glyph_dilation_for_color(& self, Hsla)-> u8",
+        "fn glyph_for_char(& self, FontId, char)-> Option < GlyphId >",
+        "fn glyph_raster_bounds(& self, & RenderGlyphParams)-> Result < Bounds < DevicePixels > >",
+        "fn layout_line(& self, & str, Pixels, & [FontRun])-> LineLayout",
+        "fn prewarm_fonts(& self, & [FontId])",
+        "fn rasterize_glyph(& self, & RenderGlyphParams, Bounds < DevicePixels >)-> Result < (Size < DevicePixels > , Vec < u8 >) >",
+        "fn recommended_rendering_mode(& self, FontId, Pixels)-> TextRenderingMode",
+        "fn set_missing_glyph_sink(& self, Option < Arc < dyn MissingGlyphSink > >)",
+        "fn typographic_bounds(& self, FontId, GlyphId)-> Result < Bounds < f32 > >"
+      ],
       "42aeb9217a8f9af8aa26eea7cf0b4bd50dde5e8038f89cbc4b5cc81f0e510360": [
         "fn add_fonts(& self, Vec < Cow < 'static , [u8] > >)-> Result < () >",
         "fn advance(& self, FontId, GlyphId)-> Result < Size < f32 > >",
