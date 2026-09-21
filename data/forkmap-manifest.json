@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.manifest.v1",
-  "dataset_synced_at": "2026-09-17T06:41:46+00:00",
+  "dataset_synced_at": "2026-09-21T03:08:57+00:00",
   "dataset_schema": "gocar.contract.v0",
   "contract": "gpui",
   "contract_description": "GPUI, Zed's GPU-accelerated UI framework — contract across its crates.io forks",
@@ -1093,8 +1093,8 @@
       "package": "gpui-pre",
       "lib_name": "gpui",
       "repository": "https://github.com/zed-industries/zed",
-      "description": "Zed's GPU-accelerated UI framework (gpui-pre snapshot of zed@d89e9c2)",
-      "api_epoch": "epoch-04763740bbc6",
+      "description": "Zed's GPU-accelerated UI framework (gpui-pre snapshot of zed@bcf6582)",
+      "api_epoch": "epoch-2bbdb99e800f",
       "platform_companion": {
         "package": "gpui-pre-platform",
         "pin": "mirror",
@@ -1104,7 +1104,7 @@
         ],
         "note": "version-for-version mirror of gpui-pre 0.3.x (4/4, crates.io index, 2026-09-06); unlike the other mirrors its fork dependency is hard (=N). Compile-verified by T-20 (2026-09-07: gpui-pre 0.3.3 + this companion built the scaffold app under rustc 1.95; the measured-equal unofficial 1.19.0-pre side also compiles; docs/04-user-docs/07)."
       },
-      "latest_stable": "0.3.5",
+      "latest_stable": "0.3.6",
       "compile_verified": {
         "vers": "0.3.3",
         "toolchain": "1.95.0",
@@ -1179,6 +1179,18 @@
           "versem": [
             5,
             1,
+            0,
+            0
+          ]
+        },
+        {
+          "vers": "0.3.6",
+          "yanked": false,
+          "prerelease": false,
+          "api_hash": "2bbdb99e800ff8e54a54a52323a5bd49f19f0fee96f174218ae523ee1ac81635",
+          "versem": [
+            7,
+            2,
             0,
             0
           ]
@@ -1432,7 +1444,7 @@
       },
       {
         "provider": "gpui-pre",
-        "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"gpui-pre\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"0.3.5\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"gpui-pre\", version = \"=0.3.5\" }\n# Post-split launch shape (T-17): the fork crate ships no platform layer —\n# `gpui-platform` is the per-fork companion, version-locked 1:1, and code\n# launches via `gpui_platform::application()`. `add`/`lock` keep both lines\n# in lockstep.\ngpui-platform = { package = \"gpui-pre-platform\", version = \"=0.3.5\", features = [\"x11\", \"wayland\"] }\n",
+        "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"gpui-pre\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"0.3.6\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"gpui-pre\", version = \"=0.3.6\" }\n# Post-split launch shape (T-17): the fork crate ships no platform layer —\n# `gpui-platform` is the per-fork companion, version-locked 1:1, and code\n# launches via `gpui_platform::application()`. `add`/`lock` keep both lines\n# in lockstep.\ngpui-platform = { package = \"gpui-pre-platform\", version = \"=0.3.6\", features = [\"x11\", \"wayland\"] }\n",
         "main_rs": "//! Minimal GPUI hello world against the gpui contract, post-split launch\n//! shape: `gpui` (the renamed fork) provides the API, the per-fork platform\n//! companion provides `application()`. The code never names a fork — swap\n//! providers with:\n//!\n//!     cargo gocar add gpui-ce\n//!     cargo gocar lock\n//!\n//! then `cargo build --locked`.\n\nuse gpui::{\n    App, Bounds, Context, IntoElement, Render, SharedString, Window, WindowBounds,\n    WindowOptions, div, prelude::*, px, rgb, size,\n};\nuse gpui_platform::application;\n\nstruct HelloWorld {\n    text: SharedString,\n}\n\nimpl Render for HelloWorld {\n    fn render(&mut self, _window: &mut Window, _cx: &mut Context<Self>) -> impl IntoElement {\n        div()\n            .flex()\n            .size_full()\n            .bg(rgb(0x101418))\n            .justify_center()\n            .items_center()\n            .child(\n                div()\n                    .text_xl()\n                    .text_color(rgb(0xffffff))\n                    .child(format!(\"Hello from {}!\", self.text)),\n            )\n    }\n}\n\nfn main() {\n    application().run(|cx: &mut App| {\n        let bounds = Bounds::centered(None, size(px(480.), px(320.)), cx);\n        cx.open_window(\n            WindowOptions {\n                window_bounds: Some(WindowBounds::Windowed(bounds)),\n                ..Default::default()\n            },\n            |_, cx| cx.new(|_| HelloWorld { text: \"gocar\".into() }),\n        )\n        .unwrap();\n        cx.activate(true);\n    });\n}\n"
       },
       {
@@ -1757,6 +1769,10 @@
           {
             "vers": "0.3.5",
             "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"gpui-pre\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"0.3.5\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"gpui-pre\", version = \"=0.3.5\" }\n# Post-split launch shape (T-17): the fork crate ships no platform layer —\n# `gpui-platform` is the per-fork companion, version-locked 1:1, and code\n# launches via `gpui_platform::application()`. `add`/`lock` keep both lines\n# in lockstep.\ngpui-platform = { package = \"gpui-pre-platform\", version = \"=0.3.5\", features = [\"x11\", \"wayland\"] }\n"
+          },
+          {
+            "vers": "0.3.6",
+            "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"gpui-pre\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"0.3.6\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"gpui-pre\", version = \"=0.3.6\" }\n# Post-split launch shape (T-17): the fork crate ships no platform layer —\n# `gpui-platform` is the per-fork companion, version-locked 1:1, and code\n# launches via `gpui_platform::application()`. `add`/`lock` keep both lines\n# in lockstep.\ngpui-platform = { package = \"gpui-pre-platform\", version = \"=0.3.6\", features = [\"x11\", \"wayland\"] }\n"
           }
         ]
       },
@@ -1831,9 +1847,9 @@
   ],
   "counts": {
     "providers": 6,
-    "versions": 75,
-    "items": 182947,
-    "keys": 13388,
+    "versions": 76,
+    "items": 185078,
+    "keys": 13403,
     "facades": 20
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-09-17T06:41:46+00:00",
+  "dataset_synced_at": "2026-09-21T03:08:57+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -4616,6 +4616,11 @@
       "53e4ef29d5b8fc51c72c23bf79b10adae498945b25297fe4027e5bbb154232e8": [
         "Idle {  }",
         "Presented (  )"
+      ],
+      "5bc2ebd157b12731c671ce8fd46cbe364bb27ddca5e36bf21aa6c792a05937de": [
+        "Idle {  }",
+        "PowerTransition {  }",
+        "Presented (  )"
       ]
     },
     "enum:scene_graph::HandlePosition": {
@@ -5202,6 +5207,11 @@
     },
     "struct:AsyncWindowContext": {
       "0d9baf218a21a63f6acd5b518724809644c6028c65c8fdf356d14145a9b02017": []
+    },
+    "struct:AtlasState": {
+      "cedde2142817d00d4ff489bd31ed41832952e353b1ea84a61dbdaaf1ca46d5a1": [
+        "backend : Backend"
+      ]
     },
     "struct:AtlasTextureId": {
       "b9ead1b9d9ac3c37f3135af784eae6167638fde4fdb035bf7a92c500fa3893b8": [
@@ -6263,6 +6273,12 @@
         "background_executor : BackgroundExecutor",
         "foreground_executor : ForegroundExecutor"
       ]
+    },
+    "struct:HeadlessAtlas": {
+      "25e00278338f7dfa74a3321f65d17596042c9fed0f6fa087058f95bcee9b9ae9": []
+    },
+    "struct:HeadlessAtlasBackend": {
+      "f1ff08e3482b502a3dfcf6122249606cd1c675da260515d7503818d8925347a7": []
     },
     "struct:HighlightStyle": {
       "38ce8cc5a8306a43b15a74454869beec545a5ba88b163bab5272777d900381c4": [
@@ -12259,6 +12275,24 @@
       ]
     },
     "struct:profiler::hang::SerializedHangIncident": {
+      "1cb10bb053503e210f72e7b3f23f239fc7f8e69a08d9804ed8b86f5a86a26d69": [
+        "active_ms : f64",
+        "busy_fraction : f64",
+        "contributors : Vec < SerializedHangContributor >",
+        "contributors_elided : usize",
+        "dirty_to_present_ms : Option < f64 >",
+        "dropped_events : u64",
+        "event_count : usize",
+        "journal_discontinuous : bool",
+        "measurement_version : u32",
+        "phase : & 'static str",
+        "sealed_by : & 'static str",
+        "small_poll_count : u64",
+        "small_poll_total_ms : f64",
+        "stall_ms : f64",
+        "start_ms : f64",
+        "trigger : HangTrigger"
+      ],
       "da4ee8cbdfac8440e4d69158e3a9efcccf0f2e090a0dce29502395546683697e": [
         "active_ms : f64",
         "busy_fraction : f64",
@@ -12972,6 +13006,12 @@
       "33c48bb85aa2fd195eef17f711c7f39e52528536bed5d7d55c24a317dbd2b54f": [
         "fn list(& self, & str)-> Result < Vec < SharedString > >",
         "fn load(& self, & str)-> Result < Option < Cow < 'static , [u8] > > >"
+      ]
+    },
+    "trait:AtlasBackend": {
+      "5e84bedb6e464a957f424785ae0bea325666092b109667e9b892ef0f72d5cba6": [
+        "fn insert(& mut self, AtlasTextureKind, Size < DevicePixels >, & [u8])-> Result < AtlasTile >",
+        "fn remove(& mut self, AtlasTile)"
       ]
     },
     "trait:BorrowAppContext": {
@@ -14627,6 +14667,11 @@
       ],
       "74883d7f00b637f3d576cfc0dccab1b46c30e888ca3e5582aa559a0200bfe40f": [
         "fn get_or_insert_with<'a>(& self, & AtlasKey, & mut dyn FnMut () -> Result < Option < (Size < DevicePixels > , Cow < 'a , [u8] >) > >)-> Result < Option < AtlasTile > >",
+        "fn remove(& self, & AtlasKey)"
+      ],
+      "8813b4689df0699315e7498efcaaa9c815572cbfafbcee353a446557a7771bdc": [
+        "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn contains(& self, & AtlasKey)-> bool",
+        "fn get_or_insert_with<'a>(& self, AtlasKey, & mut dyn FnMut () -> Result < Option < (Size < DevicePixels > , Cow < 'a , [u8] >) > >)-> Result < Option < AtlasTile > >",
         "fn remove(& self, & AtlasKey)"
       ],
       "f65f465ad04724d5874efeb041e23fbfe7e325bfc7551fc263e460ed96bb6690": [
