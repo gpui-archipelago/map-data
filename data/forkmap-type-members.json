@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-09-28T02:49:11+00:00",
+  "dataset_synced_at": "2026-10-01T00:12:25+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -1409,6 +1409,19 @@
         "Image (  )",
         "Render (  )",
         "Resource (  )"
+      ]
+    },
+    "enum:IndentAdjustment": {
+      "2abb0fbf196c79a1ff146c47d3cad00e51db190f8b6571cc1afb9e8d29f7ad4f": [
+        "ExtraColumns (  )",
+        "NoIndent",
+        "SameIndent"
+      ]
+    },
+    "enum:InputPreference": {
+      "9e29fd9d866566cfd9a33afac0698185ceeac0b717b715aa9b666d141f5402d7": [
+        "CharacterInput",
+        "KeyBindings"
       ]
     },
     "enum:KeyBindingContextPredicate": {
@@ -4573,6 +4586,18 @@
         "Present (  )"
       ]
     },
+    "enum:profiler::hang::HangMonitorError": {
+      "4c3b59479337be801f62eb2b66035fdbc09646c3c241ccdfa0578653e761514c": [
+        "AlreadyStarted",
+        "Spawn (  )"
+      ]
+    },
+    "enum:profiler::hang::HangMonitorPollReason": {
+      "092160bc79f7bad2018ba3079e86c6a12ab1b672cee995624de8d98e4bd4ad4d": [
+        "Flush",
+        "Interval"
+      ]
+    },
     "enum:profiler::hang::HangTrigger": {
       "61faa8042407772df0a4fd121ac4e592afeed20a69d9bfd086df18a9e8ee5f90": [
         "Budget",
@@ -4621,6 +4646,59 @@
         "Idle {  }",
         "PowerTransition {  }",
         "Presented (  )"
+      ]
+    },
+    "enum:randomized_element_tree::ChangeLocality": {
+      "ccec7e8070d95c0f1ac170ec42fad22a02f61979743b1705601e8e9d29fa0bbc": [
+        "Localized",
+        "Spread"
+      ]
+    },
+    "enum:randomized_element_tree::RandomizedElementTreeMutation": {
+      "a13cb13b38e8162dda0dcd79f1793b5d534428d1767f8d027a81139737bd2c0c": [
+        "ChildBorder {  }",
+        "ChildBounds {  }",
+        "ChildClipping {  }",
+        "ChildColor {  }",
+        "ChildOpacity {  }",
+        "ChildVisibility {  }",
+        "Inserted {  }",
+        "Removed {  }",
+        "Reordered {  }",
+        "RootBorder",
+        "RootBounds",
+        "RootClipping",
+        "RootColor",
+        "RootOpacity",
+        "RootVisibility"
+      ]
+    },
+    "enum:randomized_element_tree::RandomizedElementTreeMutationKind": {
+      "b75d7fbd26bfd4819e6bcea23b0c4983e6ccf56e21196663d814d950f979f9ce": [
+        "ChildBorder",
+        "ChildBounds",
+        "ChildClipping",
+        "ChildColor",
+        "ChildOpacity",
+        "ChildVisibility",
+        "Insert",
+        "Remove",
+        "RemoveLeaf",
+        "Reorder",
+        "RootBorder",
+        "RootBounds",
+        "RootClipping",
+        "RootColor",
+        "RootOpacity",
+        "RootVisibility"
+      ]
+    },
+    "enum:randomized_element_tree::RandomizedElementTreeTopology": {
+      "1a1311d89566e063a5bf5f2fc623e9c6777afe625754f4d96518edef58e94964": [
+        "Deep",
+        "Mixed",
+        "Narrow",
+        "Wide"
       ]
     },
     "enum:scene_graph::HandlePosition": {
@@ -6486,6 +6564,12 @@
       "397ec1e0392cc1e4fa51f90ede5c597424a6ce052d5a7f9cbde5b2bc30a216a7": [
         "action : Option < Box < dyn Action > >",
         "context_stack : Vec < KeyContext >",
+        "keystroke : Keystroke"
+      ],
+      "b93730381f68058f1944d74dfb11cbb9debbb48f2e26270c8cedcc924e62507f": [
+        "action : Option < Box < dyn Action > >",
+        "context_stack : Vec < KeyContext >",
+        "input_preference : InputPreference",
         "keystroke : Keystroke"
       ]
     },
@@ -12274,6 +12358,20 @@
         "trigger : HangTrigger"
       ]
     },
+    "struct:profiler::hang::HangMonitorConfig": {
+      "f1f52a435da5671d74a7abb8bc842fb0f353810bb47399cc0fa514d7027b5cc6": [
+        "frame_budget : Duration",
+        "interval : Duration",
+        "threshold : Duration"
+      ]
+    },
+    "struct:profiler::hang::HangMonitorPoll": {
+      "81f8ec0665a9b5d6265693eb42ff653020165f76198b0baaf3edd783823bcd25": [
+        "first_present_at : Option < Instant >",
+        "incidents : Vec < HangIncident >",
+        "reason : HangMonitorPollReason"
+      ]
+    },
     "struct:profiler::hang::SerializedHangIncident": {
       "1cb10bb053503e210f72e7b3f23f239fc7f8e69a08d9804ed8b86f5a86a26d69": [
         "active_ms : f64",
@@ -12416,6 +12514,27 @@
       "4127f7a6589ea73fdb0daf93c2de37dd6ac8436583c00df5a10c8a1db9deeed0": [],
       "923f62406a0f02bea10858506621dedc4933b86e71a18a8842887f32de37b1da": [],
       "929aada5b8dc59c6850d57a09ea0be3e379aede6b81edf4cce01928a9196e8c4": []
+    },
+    "struct:randomized_element_tree::RandomizedElementTree": {
+      "ed729211de062cd56a6d4f9ccf0a1febb4c9907abf871f5388357e2cbdabbc52": []
+    },
+    "struct:randomized_element_tree::RandomizedElementTreeBounds": {
+      "d6ea25d0286a446e851f1393e786c40fed0344eacbcc552e1fd695283c236ba7": []
+    },
+    "struct:randomized_element_tree::RandomizedElementTreeConfig": {
+      "cfbabfd2fd7ac160b1747548adb03b8201a5de4f45c55fb9f97f3951d67122c3": []
+    },
+    "struct:randomized_element_tree::RandomizedElementTreeSnapshot": {
+      "613886752f914f55cb27104abde12408e2ad99d8c1721a59c239bf24202c9e42": []
+    },
+    "struct:randomized_element_tree::RandomizedElementTreeWorkCounters": {
+      "d702ee0b16d9fca7a6235903dad3dc16622d8ee8ff9a1f460b4302690536e223": []
+    },
+    "struct:randomized_element_tree::RecoloredChildren": {
+      "a47dbb5b4f86d35fc015373b2e5864e5097c6193a06dba1b122ee85bc1f24f94": [
+        "notified : usize",
+        "recolored : usize"
+      ]
     },
     "struct:runtime::WorkerClient": {
       "75271f683fed58a5189e729b43001a6dc846a7a558c33a59445fb93426750117": []
