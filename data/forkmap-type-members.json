@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-10-01T00:12:25+00:00",
+  "dataset_synced_at": "2026-10-05T00:43:40+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -13,6 +13,12 @@
       "6f3b8fe5cf436e1ead896e7feba2ab3c6e294c55aa582ebf5fcf6eda1926d5df": [
         "BuildError {  }",
         "NotFound {  }"
+      ]
+    },
+    "enum:ActivationPolicy": {
+      "c969aa8e2cd58fe4c0edbec6cd77cb82e1d9a98057d7d2c75740548f57339bc0": [
+        "Accessory",
+        "Regular"
       ]
     },
     "enum:AdvancedInputNextAction": {
@@ -1174,6 +1180,12 @@
         "Full",
         "None",
         "Region (  )"
+      ]
+    },
+    "enum:FrameRequestSource": {
+      "dc4400877bc5ac726983a60abddd999c2370e9000ee7830665bdd1331d8979a1": [
+        "LocalSchedule",
+        "NativeCallback"
       ]
     },
     "enum:GestureInputKind": {
@@ -2486,6 +2498,9 @@
       ],
       "7fd70ab0e9cbff9a49bb501e27470f9278a9f030045ecff87408d0238227002f": [
         "[cfg (target_os = \"macos\")] Surface (  )"
+      ],
+      "eccce68010020aa4bc19dfec5923805dfb8a56390f0a675d1de6ac0d85824add": [
+        "[cfg (any (target_os = \"macos\" , target_os = \"ios\"))] Surface (  )"
       ]
     },
     "enum:SvgSize": {
@@ -3148,6 +3163,12 @@
       "2099119822e0a852d2fcdceea88aa53c8f440f3b747f01402adf582bdd70da0b": [
         "Hidden",
         "Visible"
+      ]
+    },
+    "enum:WindowingRequest": {
+      "b53ce0626b343a2b5804099a5ed0e40328a8e568083c944a17840ebed12a53df": [
+        "Headless",
+        "Windowed (  )"
       ]
     },
     "enum:WorkspaceOpenNextAction": {
@@ -4624,11 +4645,26 @@
       ]
     },
     "enum:profiler::journal::ForegroundJournalEntry": {
+      "947fc2279c5579b620a6e8daf4b4430a4b622aabf6275e194dbb84d9d7ceeae6": [
+        "Boundary (  )",
+        "Discontinuity {  }",
+        "Event (  )",
+        "FrameState (  )",
+        "PlatformSignal (  )",
+        "ReentrantFrameSkipped {  }"
+      ],
       "d1caa5d2240a717df3ef68e05effb01fa5b891cbcd8d76fd0eda28207fab61ca": [
         "Boundary (  )",
         "Discontinuity {  }",
         "Event (  )",
         "FrameState (  )"
+      ]
+    },
+    "enum:profiler::journal::FrameSkipReason": {
+      "64cc5cc2d7a95ec11f73cd60c6721f1fd9d2868563194e8c65c76245eb6d9d3c": [
+        "InactiveFrameRateLimit",
+        "NoRenderNeeded",
+        "ThermalFrameRateLimit"
       ]
     },
     "enum:profiler::journal::FrameStateChange": {
@@ -4643,6 +4679,12 @@
         "Presented (  )"
       ],
       "5bc2ebd157b12731c671ce8fd46cbe364bb27ddca5e36bf21aa6c792a05937de": [
+        "Idle {  }",
+        "PowerTransition {  }",
+        "Presented (  )"
+      ],
+      "ce9a393f523b8d393ee0eef85d82eee26714d8a08e0566c1f21e14eb0cdfe174": [
+        "FrameSkipped (  )",
         "Idle {  }",
         "PowerTransition {  }",
         "Presented (  )"
@@ -6311,6 +6353,17 @@
     "struct:GpuiBorrow": {
       "361dd9c64c28f25753e39377f26a864d3a7d077aced021b3b019eaaf6b38cbf4": []
     },
+    "struct:GraphicalEnvironment": {
+      "5dcb4a44c56c92f39aaddf893e80b19472ca33dbd83a42f5391c6ec01f74590d": [
+        "session_id : Option < u32 >"
+      ],
+      "d6a5b86fa99ad52ecd1eb65286aefbb146627ae02ec3919756978d3932a4e5e2": [
+        "activation_token : Option < String >",
+        "wayland_display : Option < OsString >",
+        "x11_display : Option < OsString >",
+        "xdg_runtime_dir : Option < OsString >"
+      ]
+    },
     "struct:GraphicsCanvasHandoff": {
       "422b7a1bd8de1ee390b342223fae068eb1f3b50f7da1ee7b44a0125918aed21c": []
     },
@@ -6648,6 +6701,7 @@
       "0183ad7053ad686e4a1cafa9a4717c090adeee75ee2b05f53ab7f9aef10c445f": []
     },
     "struct:LeakDetectorSnapshot": {
+      "3b56756330f1d658ec9128868b7d3b8218fbffd30af44cfd25a6740f29c8d3fb": [],
       "a266fe9868cc0dd3968e1625c7bc1f83a569a97f6c28db5ad6cc60637cade33d": []
     },
     "struct:LineLayout": {
@@ -7163,6 +7217,12 @@
         "bounds : Bounds < ScaledPixels >",
         "content_mask : ContentMask < ScaledPixels >",
         "order : DrawOrder"
+      ],
+      "d15a0d7228aa73f479fe054ea76cef157ca46321b1795505fb82e9e52bffbedd": [
+        "[cfg (any (target_os = \"macos\" , target_os = \"ios\"))] image_buffer : core_video :: pixel_buffer :: CVPixelBuffer",
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "order : DrawOrder"
       ]
     },
     "struct:ParsedSvg": {
@@ -7287,6 +7347,9 @@
       "8571232c6f60c6a08954b10160aa3fa92c0b1341b39f8fc3ee85be2a2b5b290d": [
         "f32"
       ]
+    },
+    "struct:PlatformFrameSignal": {
+      "3c244cc9ec48635d574074d88c93696ba8e0ddf75ebb1951def340236d2edc9c": []
     },
     "struct:PlatformInputHandler": {
       "3db3f7bfe35dbdca79ee4ad50d2d9fa2be1babcdeb828e36e1675377dacf6eae": []
@@ -7627,6 +7690,12 @@
       "aeb4f247bf4442659bc6192a7ca4ffa73b4cdb50bf61fd533b3801599394c29c": [
         "force_render : bool",
         "require_presentation : bool"
+      ],
+      "cbe73c1d1bbbbbd38d1c148f877bbdea57b001f23687a7d8956a24f33b4d491b": [
+        "force_render : bool",
+        "require_presentation : bool",
+        "signal_at : Option < Instant >",
+        "signal_source : FrameRequestSource"
       ]
     },
     "struct:Reservation": {
@@ -12437,6 +12506,13 @@
     "struct:profiler::journal::ForegroundJournalCollector": {
       "ccccd29fbce61a69e9f0d8958ec94b7db7272ac6432db0fe49c84b3bd90ae18d": []
     },
+    "struct:profiler::journal::FrameSkipped": {
+      "e0ec8d42708fdb241542a2c3612b0599a3f18a707775e7f34400d72a7c6ae294": [
+        "at : Instant",
+        "reason : FrameSkipReason",
+        "window_id : WindowId"
+      ]
+    },
     "struct:profiler::journal::FrameSnapshot": {
       "ba79998dd08d0a4af6c7873ba6e0c05b3b826038cd50435ead88d707c9f92db9": [
         "boundary : IntervalBoundary",
@@ -12457,6 +12533,14 @@
     },
     "struct:profiler::journal::IntervalSealer": {
       "8e9a2d57c2501a13deeb6886b135d9e6ee3b72878f3b60b373c76883d88eda8c": []
+    },
+    "struct:profiler::journal::PlatformSignal": {
+      "8c5ea540c7db233d30a97161d50a61b42e7a72d7fdabefabcf84348464dcc11b": [
+        "handled_at : Instant",
+        "signal_at : Option < Instant >",
+        "source : crate :: FrameRequestSource",
+        "window_id : WindowId"
+      ]
     },
     "struct:profiler::journal::PollSummary": {
       "287ec66e441b25b30855833763c2d7459a952ea4abdfa8b7da0299388835350d": [
@@ -13878,6 +13962,54 @@
         "fn track_focus(mut self, & FocusHandle)-> Self",
         "fn window_control_area(mut self, WindowControlArea)-> Self"
       ],
+      "93c016ac9a15264f96c5604288786b0e4d21825da3c35f6fd2634567f7c24b7f": [
+        "[cfg (any (test , all (debug_assertions , feature = \"test-support\")))] fn debug_selector(mut self, impl FnOnce () -> String)-> Self",
+        "[cfg (not (any (test , all (debug_assertions , feature = \"test-support\"))))] fn debug_selector(self, impl FnOnce () -> String)-> Self",
+        "fn block_mouse_except_scroll(mut self)-> Self",
+        "fn can_drop(mut self, impl Fn (& dyn Any , & mut Window , & mut App) -> bool + 'static)-> Self",
+        "fn capture_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_up(mut self, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn drag_over<S : 'static>(mut self, impl 'static + Fn (StyleRefinement , & S , & mut Window , & mut App) -> StyleRefinement)-> Self",
+        "fn focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn focus_visible(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn group(mut self, impl Into < SharedString >)-> Self",
+        "fn group_drag_over<S : 'static>(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn group_hover(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn hover(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn id(mut self, impl Into < ElementId >)-> Stateful < Self >",
+        "fn in_focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn interactivity(& mut self)-> & mut Interactivity",
+        "fn key_context<C , E>(mut self, C)-> Selfwhere C : TryInto < KeyContext , Error = E > , E : std :: fmt :: Display ,",
+        "fn occlude(mut self)-> Self",
+        "fn on_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_boxed_action(mut self, & dyn Action, impl Fn (& dyn Action , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drag_move<T : 'static>(mut self, impl Fn (& DragMoveEvent < T > , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drop<T : 'static>(mut self, impl Fn (& T , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_file_drop_exit(mut self, impl Fn (& FileDropEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_modifiers_changed(mut self, impl Fn (& ModifiersChangedEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down(mut self, MouseButton, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down_out(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_exit(mut self, impl Fn (& MouseExitEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_move(mut self, impl Fn (& MouseMoveEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up_out(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_scroll_wheel(mut self, impl Fn (& ScrollWheelEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn tab_group(mut self)-> Self",
+        "fn tab_index(mut self, isize)-> Self",
+        "fn tab_stop(mut self, bool)-> Self",
+        "fn track_focus(mut self, & FocusHandle)-> Self",
+        "fn window_control_area(mut self, WindowControlArea)-> Self"
+      ],
       "9b952864b51b422c41d85ffd341e9e064a80627be7e322266567705b08b758f0": [
         "[cfg (any (test , feature = \"test-support\"))] fn debug_selector(mut self, impl FnOnce () -> String)-> Self",
         "[cfg (not (any (test , feature = \"test-support\")))] fn debug_selector(self, impl FnOnce () -> String)-> Self",
@@ -14158,6 +14290,83 @@
         "fn set_app_identity(& self, & str, & str)",
         "fn set_cursor_style(& self, CursorStyle)",
         "fn set_dock_menu(& self, Vec < MenuItem >, & Keymap)",
+        "fn set_menus(& self, Vec < Menu >, & Keymap)",
+        "fn set_window_appearance(& self, Option < WindowAppearance >)",
+        "fn should_auto_hide_scrollbars(& self)-> bool",
+        "fn show_system_notification(& self, SystemNotification)",
+        "fn text_system(& self)-> Arc < dyn PlatformTextSystem >",
+        "fn thermal_state(& self)-> ThermalState",
+        "fn unhide_other_apps(& self)",
+        "fn update_jump_list(& self, Vec < MenuItem >, Vec < SmallVec < [PathBuf ; 2] > >)-> Task < Vec < SmallVec < [PathBuf ; 2] > > >",
+        "fn window_appearance(& self)-> WindowAppearance",
+        "fn window_stack(& self)-> Option < Vec < AnyWindowHandle > >",
+        "fn write_credentials(& self, & str, & str, & [u8])-> Task < Result < () > >",
+        "fn write_to_clipboard(& self, ClipboardItem)"
+      ],
+      "3f40e3d81a0bbeefbe5f92197ce2fe6e4301cb1550bc5c0a5e4172705141d225": [
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn read_from_primary(& self)-> Option < ClipboardItem >",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn write_to_primary(& self, ClipboardItem)",
+        "[cfg (target_os = \"macos\")] fn read_from_find_pasteboard(& self)-> Option < ClipboardItem >",
+        "[cfg (target_os = \"macos\")] fn write_to_find_pasteboard(& self, ClipboardItem)",
+        "fn activate(& self, bool)",
+        "fn active_window(& self)-> Option < AnyWindowHandle >",
+        "fn add_recent_document(& self, & Path)",
+        "fn app_path(& self)-> Result < PathBuf >",
+        "fn background_executor(& self)-> BackgroundExecutor",
+        "fn button_layout(& self)-> Option < WindowButtonLayout >",
+        "fn can_select_mixed_files_and_dirs(& self)-> bool",
+        "fn compositor_name(& self)-> & 'static str",
+        "fn delete_credentials(& self, & str)-> Task < Result < () > >",
+        "fn dismiss_system_notification(& self, & str)",
+        "fn displays(& self)-> Vec < Rc < dyn PlatformDisplay > >",
+        "fn foreground_executor(& self)-> ForegroundExecutor",
+        "fn gestures(& self)-> Option < Rc < dyn PlatformGestures > >",
+        "fn get_menus(& self)-> Option < Vec < OwnedMenu > >",
+        "fn graphical_environment(& self)-> Option < GraphicalEnvironment >",
+        "fn hide(& self)",
+        "fn hide_cursor_until_mouse_moves(& self)",
+        "fn hide_other_apps(& self)",
+        "fn is_cursor_visible(& self)-> bool",
+        "fn is_screen_capture_supported(& self)-> bool",
+        "fn keyboard_layout(& self)-> Box < dyn PlatformKeyboardLayout >",
+        "fn keyboard_mapper(& self)-> Rc < dyn PlatformKeyboardMapper >",
+        "fn on_app_lifecycle(& self, Box < dyn FnMut (AppLifecyclePhase) >)",
+        "fn on_app_menu_action(& self, Box < dyn FnMut (& dyn Action) >)",
+        "fn on_keyboard_layout_change(& self, Box < dyn FnMut () >)",
+        "fn on_memory_warning(& self, Box < dyn FnMut () >)",
+        "fn on_open_urls(& self, Box < dyn FnMut (Vec < String >) >)",
+        "fn on_quit(& self, Box < dyn FnMut () -> bool >)",
+        "fn on_reopen(& self, Box < dyn FnMut () >)",
+        "fn on_system_notification_response(& self, Box < dyn FnMut (SystemNotificationResponse) >)",
+        "fn on_system_sleep(& self, Box < dyn FnMut () >)",
+        "fn on_system_wake(& self, Box < dyn FnMut () >)",
+        "fn on_thermal_state_change(& self, Box < dyn FnMut () >)",
+        "fn on_validate_app_menu_command(& self, Box < dyn FnMut (& dyn Action) -> bool >)",
+        "fn on_will_open_app_menu(& self, Box < dyn FnMut () >)",
+        "fn open_url(& self, & str)",
+        "fn open_window(& self, AnyWindowHandle, WindowParams)-> anyhow :: Result < Box < dyn PlatformWindow > >",
+        "fn open_with_system(& self, & Path)",
+        "fn path_for_auxiliary_executable(& self, & str)-> Result < PathBuf >",
+        "fn perform_dock_menu_action(& self, usize)",
+        "fn prevent_idle_sleep(& self, & str)-> Task < Result < ActivityGuard > >",
+        "fn primary_display(& self)-> Option < Rc < dyn PlatformDisplay > >",
+        "fn prompt_for_new_path(& self, & Path, Option < & str >)-> oneshot :: Receiver < Result < Option < PathBuf > > >",
+        "fn prompt_for_paths(& self, PathPromptOptions)-> oneshot :: Receiver < Result < Option < Vec < PathBuf > > > >",
+        "fn quit(& self)",
+        "fn read_credentials(& self, & str)-> Task < Result < Option < (String , Vec < u8 >) > > >",
+        "fn read_from_clipboard(& self)-> Option < ClipboardItem >",
+        "fn read_from_clipboard_async(& self)-> Task < Result < Option < ClipboardItem > , ClipboardReadError > >",
+        "fn register_url_scheme(& self, & str)-> Task < Result < () > >",
+        "fn request_windowing(& self, WindowingRequest)-> Task < anyhow :: Result < () > >",
+        "fn restart(& self, Option < PathBuf >, Vec < OsString >)",
+        "fn reveal_path(& self, & Path)",
+        "fn run(& self, Box < dyn 'static + FnOnce () >)",
+        "fn screen_capture_sources(& self)-> oneshot :: Receiver < anyhow :: Result < Vec < Rc < dyn ScreenCaptureSource > > > >",
+        "fn set_activation_policy(& self, ActivationPolicy)",
+        "fn set_app_identity(& self, & str, & str)",
+        "fn set_cursor_style(& self, CursorStyle)",
+        "fn set_dock_menu(& self, Vec < MenuItem >, & Keymap)",
+        "fn set_initial_windowing(& self, WindowingRequest)",
         "fn set_menus(& self, Vec < Menu >, & Keymap)",
         "fn set_window_appearance(& self, Option < WindowAppearance >)",
         "fn should_auto_hide_scrollbars(& self)-> bool",
