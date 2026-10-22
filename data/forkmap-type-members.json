@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-10-14T21:01:58+00:00",
+  "dataset_synced_at": "2026-10-20T22:32:59+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -18,6 +18,11 @@
     "enum:ActivationPolicy": {
       "c969aa8e2cd58fe4c0edbec6cd77cb82e1d9a98057d7d2c75740548f57339bc0": [
         "Accessory",
+        "Regular"
+      ],
+      "cda0fb20dee0ffb8c94b29fb2ce0fcbc8e156bbb38ea19e03c7bec434d45a715": [
+        "Accessory",
+        "Prohibited",
         "Regular"
       ]
     },
@@ -92,6 +97,12 @@
       "d00ab4058b3fa13bd0b8a7c398787550b029068d1adc92cbcd1a64a7d31eff89": [
         "Local",
         "Window"
+      ]
+    },
+    "enum:AnyMotion": {
+      "f773145d24b56c8edd477733d47ec710565a9ea8cd2399db7ce6c00aea6713f7": [
+        "Duration (  )",
+        "Spring (  )"
       ]
     },
     "enum:AppChromeSurfaceNextAction": {
@@ -190,6 +201,13 @@
       "e24e8de9a662a3b215345fc7083416e8dcd8ceccaeed05eeb37acf917a5567f4": [
         "Active",
         "Background",
+        "Foreground",
+        "Inactive"
+      ],
+      "ee6a712a5c89670cde6267b64a7495c10e52380fd535eb41cd44167429117e13": [
+        "Active",
+        "Background",
+        "Disconnected",
         "Foreground",
         "Inactive"
       ]
@@ -359,6 +377,12 @@
         "Window (  )"
       ]
     },
+    "enum:AssetEntry": {
+      "6894aa5e63df7a502b8982126fbf8036a5be76a16ce14cd9b14fc687f34d8615": [
+        "OnDemand (  )",
+        "PreLoaded (  )"
+      ]
+    },
     "enum:AssetLogger": {
       "09c9863c5deab3929288f4a45e6f364914747a05fa656a042d854aadcbb82e36": [
         "_Phantom (  )"
@@ -367,6 +391,11 @@
     "enum:AtlasKey": {
       "2598664633b82ea10a5043ec2ee14dbb4598c9791011b9ae7244d2d45556a82c": [
         "Glyph (  )",
+        "Image (  )",
+        "Svg (  )"
+      ],
+      "54c77ac3abdc27a844ce5fb91775627eec00a9adc7b4d7b608647fc2c10b4352": [
+        "Glyph {  }",
         "Image (  )",
         "Svg (  )"
       ]
@@ -445,6 +474,14 @@
         "Solid (  )"
       ]
     },
+    "enum:BackgroundTag": {
+      "cdb5bc7220d94804da0cf509455dcff0e656ff0d9625ab914623927da8bce9d4": [
+        "Checkerboard = 3",
+        "LinearGradient = 1",
+        "PatternSlash = 2",
+        "Solid = 0"
+      ]
+    },
     "enum:BiometricKind": {
       "0363e968e872032e0aad50a565fab8ba29e17c9ce35c29dde1f8cde45da27eb2": [
         "Fingerprint",
@@ -519,6 +556,12 @@
         "Strict",
         "TrustedSameOrigin",
         "Unrestricted"
+      ]
+    },
+    "enum:CaretAffinity": {
+      "3ec0b189d940e451292e1bed69588986d89dcbbb6e20fb6b9e7fd11550acd224": [
+        "Downstream",
+        "Upstream"
       ]
     },
     "enum:ClickEvent": {
@@ -637,6 +680,33 @@
         "ResizeUpLeftDownRight",
         "ResizeUpRightDownLeft"
       ],
+      "76e0bdec98fcdda9718756fcf0d3d9bab693fba33d97c3ef60680029689a4004": [
+        "Arrow",
+        "ClosedHand",
+        "ContextualMenu",
+        "Crosshair",
+        "DragCopy",
+        "DragLink",
+        "IBeam",
+        "IBeamCursorForVerticalLayout",
+        "OpenHand",
+        "OperationNotAllowed",
+        "PointingHand",
+        "ResizeColumn",
+        "ResizeDown",
+        "ResizeDownLeft",
+        "ResizeDownRight",
+        "ResizeLeft",
+        "ResizeLeftRight",
+        "ResizeRight",
+        "ResizeRow",
+        "ResizeUp",
+        "ResizeUpDown",
+        "ResizeUpLeft",
+        "ResizeUpLeftDownRight",
+        "ResizeUpRight",
+        "ResizeUpRightDownLeft"
+      ],
       "f04b679cdda927ab088fc9da8683b69029a59b90cc57586913a2acfdf00e1882": [
         "Arrow",
         "ClosedHand",
@@ -697,7 +767,17 @@
         "System"
       ]
     },
+    "enum:DeferredPriority": {
+      "0b73b2afd0ef380f467117fc645464b189fb59ea98d7fc62e4fbcd58b3d7914c": [
+        "Auto",
+        "Value (  )"
+      ]
+    },
     "enum:DefiniteLength": {
+      "5f637b5b73878cf54ac954bedf25fb81959a51c3abb0acbf12315fa6ae3d1d94": [
+        "Absolute (  )",
+        "Relative (  )"
+      ],
       "8dccc6889079b7d07a62ce8877983178ec2cb4e3cdbcfe4af6ab31ca1938b0f2": [
         "Absolute (  )",
         "Fraction (  )"
@@ -759,6 +839,14 @@
         "Warning"
       ]
     },
+    "enum:Direction": {
+      "cd1ae28b3706b09f78f5313b22466bbc907e46dde6e34d9a8252632bbe8a9f16": [
+        "Alternate",
+        "AlternateReverse",
+        "Forward",
+        "Reverse"
+      ]
+    },
     "enum:DispatchPhase": {
       "5f3f759acd9a76b60c7662154fffcbab3d70fe39f6c7b7d10610a5b253f68558": [
         "Bubble",
@@ -770,6 +858,14 @@
         "Block",
         "Flex",
         "Grid",
+        "None"
+      ],
+      "fcef721ae5482bd9106c69de51a4b66cdd8ff379cc5163289feb003f4442c0b4": [
+        "Block",
+        "Flex",
+        "Grid",
+        "Inline",
+        "InlineFlex",
         "None"
       ]
     },
@@ -1091,6 +1187,12 @@
         "Blur (  )"
       ]
     },
+    "enum:FilterRenderTarget": {
+      "a7eef7c92f4d4eef743f0e536918d037e778095686df60457105acafb925c310": [
+        "Inline",
+        "Isolated (  )"
+      ]
+    },
     "enum:FindZoomDirection": {
       "b0560d272f6e5addec95c398661e55b38b7903be96c008a829c9391077cbcc6a": [
         "Next",
@@ -1141,6 +1243,12 @@
         "Italic",
         "Normal",
         "Oblique"
+      ]
+    },
+    "enum:ForegroundDependency": {
+      "e58872d8522da14719a2ee97e63c39ac289aa93e9cb0c5986d39af4ee960b4ca": [
+        "AlphaOnly",
+        "Full"
       ]
     },
     "enum:FormFieldKind": {
@@ -1203,6 +1311,13 @@
         "PinchZoom",
         "Swipe",
         "WheelZoom"
+      ]
+    },
+    "enum:GlyphRenderMode": {
+      "976b6cf8956b5cbe5bbaf9b1255c10f32f4415d4a2825e471842ee97279ba5fd": [
+        "Color",
+        "Grayscale",
+        "Subpixel"
       ]
     },
     "enum:GraphicsCanvasNextAction": {
@@ -1443,6 +1558,12 @@
         "KeyBindings"
       ]
     },
+    "enum:Iterations": {
+      "d07004ed538c3689564b7604b81e8feb15575f3c861b9a362f35af5c45b5b592": [
+        "Finite (  )",
+        "Forever"
+      ]
+    },
     "enum:KeyBindingContextPredicate": {
       "e3386ab082ce7ef397eaaf14fcc59fdd730b246f3d8c63d9518828d77b61f961": [
         "And (  )",
@@ -1516,6 +1637,14 @@
         "Fullscreen"
       ]
     },
+    "enum:LayoutDirection": {
+      "d4dbfd5c0d68c68e40c722b26ffe717cb9f095f610f72ffd12d91d2d5d58bf66": [
+        "Auto",
+        "Inherit",
+        "LeftToRight",
+        "RightToLeft"
+      ]
+    },
     "enum:LayoutStylingNextAction": {
       "b998626514b78b94cc38ead222b2e3a56ffeeb8a4177d3355440fb7a5b3a1ad3": [
         "ApplyThemeTokens",
@@ -1562,6 +1691,13 @@
         "AppImage",
         "Flatpak",
         "Snap"
+      ]
+    },
+    "enum:LinuxWindowBackground": {
+      "35d6c9b576be1f1b4c659cf885e23aa1e68e944960598eb707412ea13ef9d121": [
+        "Blurred",
+        "Opaque",
+        "Transparent"
       ]
     },
     "enum:ListAlignment": {
@@ -1684,6 +1820,13 @@
         "Regular"
       ]
     },
+    "enum:MacosWindowBackground": {
+      "92b5b625893ec622543a7ae0af67484a1ab90376d3a11e1dae68a86123b6a00d": [
+        "Blurred",
+        "Opaque",
+        "Transparent"
+      ]
+    },
     "enum:MediaKeyEvent": {
       "b113bc0aa863d7c86eeeba5f2cfd1f93ca76db47a9b6fda4a64d1aa74e071cb4": [
         "NextTrack",
@@ -1740,6 +1883,20 @@
         "Message (  )",
         "RoadmapWork {  }",
         "UnsavedChanges (  )"
+      ]
+    },
+    "enum:MotionExtent": {
+      "9b6d4e667ccde2125591f3e75442104a73e84336f956bbe5397f33ac16a59c1c": [
+        "Finite (  )",
+        "Infinite"
+      ]
+    },
+    "enum:MotionPhase": {
+      "4afa3906c5cf009631107d99c2e8a00c0c2c6cdff322cd3495b8ac1a14f6a379": [
+        "Completed",
+        "Delayed",
+        "Inactive",
+        "Playing"
       ]
     },
     "enum:MouseButton": {
@@ -1923,6 +2080,19 @@
         "UpdateOffer {  }",
         "UpdateRelease (  )",
         "UpdateState (  )"
+      ]
+    },
+    "enum:ParagraphDirection": {
+      "6bfcf8f29fe48f90610de3c0bc947777af83706aa4c4968ae2ae577b7923a351": [
+        "Auto",
+        "LeftToRight",
+        "RightToLeft"
+      ]
+    },
+    "enum:PassDirection": {
+      "4679ef94df6c376a24d193e836b068c3141a615cd82329af488fcce204be5e00": [
+        "Forward",
+        "Reverse"
       ]
     },
     "enum:PathStyle": {
@@ -2225,6 +2395,18 @@
         "Surfaces (  )",
         "Underlines (  )"
       ],
+      "94279a6f15171ab4ea188441cedc1fa92b3687d89ca95f9e0319807642d31509": [
+        "BackdropFilters (  )",
+        "FilterBoundary (  )",
+        "MonochromeSprites {  }",
+        "Paths {  }",
+        "PolychromeSprites {  }",
+        "Quads {  }",
+        "Shadows {  }",
+        "SubpixelSprites {  }",
+        "Surfaces (  )",
+        "Underlines (  )"
+      ],
       "dd4eb80e668c54bb8fcf0a93f2afa6e219e3444f22294f80a6fdad5b5a91cab0": [
         "MonochromeSprites {  }",
         "Paths (  )",
@@ -2316,10 +2498,31 @@
         "LastWindowClosed"
       ]
     },
+    "enum:RasterColorEffect": {
+      "d40a7828f8b8d60d4b499cd94674ea96fcc9438548589cca68c56fee8c9dc1b8": [
+        "Dilation (  )",
+        "Independent",
+        "Preblend (  )"
+      ]
+    },
+    "enum:RasterizedGlyphFormat": {
+      "51138b8d03bbf170ff2055b6f9776f35917521316e9bced71ccb5c1103b025fd": [
+        "AlphaMask",
+        "BgraColor",
+        "BgraSubpixelMask"
+      ]
+    },
     "enum:RealtimePriority": {
       "88d7f76bf1bba8a23febfeaef4dddbd17b7423dea6ea4aacecb49c2a0bbd58e9": [
         "Audio",
         "Other"
+      ]
+    },
+    "enum:RenderCommand": {
+      "d62a3710b5216fa8aa58df05bd3abcb65c6945e770acb519160970c974ecde9f": [
+        "Batch (  )",
+        "BeginFilter {  }",
+        "EndFilter {  }"
       ]
     },
     "enum:ResizeEdge": {
@@ -2332,6 +2535,12 @@
         "Top",
         "TopLeft",
         "TopRight"
+      ]
+    },
+    "enum:ResolvedDirection": {
+      "166d174ac15b36d98e16ac5b61336cddc2d597a7f72e9fbc91c3ae2bc9e79ab6": [
+        "LeftToRight",
+        "RightToLeft"
       ]
     },
     "enum:Resource": {
@@ -2347,6 +2556,12 @@
         "Split",
         "Stack",
         "Tabs"
+      ]
+    },
+    "enum:RingColor": {
+      "db4f13da4ad65f71e8e76a47300bb01e4313399ec2fd30f8c772ccdb86bdfd1f": [
+        "Color (  )",
+        "CurrentColor"
       ]
     },
     "enum:RunnableVariant": {
@@ -2430,6 +2645,12 @@
         "RuntimePermissionPreflight (  )"
       ]
     },
+    "enum:ShaderBool": {
+      "7ce2f1ae2bc8fb34403ce21943179f902bcbe63d315cee5a995f1dcd0dc51832": [
+        "Disabled = 0",
+        "Enabled = 1"
+      ]
+    },
     "enum:ShellTarget": {
       "2c6b11eb9e08d076d394f157e4d6cad2f86f5d953e4df4e9f121368c03b628f0": [
         "Path (  )",
@@ -2499,6 +2720,12 @@
       ]
     },
     "enum:SurfaceSource": {
+      "650e9f70228a1f3c60753d50ef464833f80688dccae465765e8e4c9733ce71c1": [
+        "Unsupported (  )",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\" , all (target_os = \"macos\" , feature = \"custom-gpu\") , all (target_family = \"wasm\" , feature = \"custom-gpu\")))] Texture {  }",
+        "[cfg (any (target_os = \"macos\" , target_os = \"ios\"))] Surface (  )",
+        "[cfg (target_os = \"windows\")] WindowsCapture (  )"
+      ],
       "76e5908347eeef3257f8c2f0614d456d9d1bb3a61ce164d14c5577d378262dea": [
         "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] Texture {  }",
         "[cfg (target_os = \"macos\")] Surface (  )"
@@ -2570,6 +2797,32 @@
         "Center",
         "Left",
         "Right"
+      ],
+      "b2ca5055230afc1fc6c377b5bf961570a93a9683abac119ef11606f4841c833d": [
+        "Center",
+        "End",
+        "Left",
+        "Right",
+        "Start"
+      ]
+    },
+    "enum:TextBoundary": {
+      "be97ce9f0872a031858f3492b8661372ef73921313f00d5e9aeb64baab810eac": [
+        "Cluster",
+        "Document",
+        "HardLine",
+        "VisualLine",
+        "Word"
+      ]
+    },
+    "enum:TextDirection": {
+      "d403274368368086fcadec5b91a3fcca28317ca6ee2128fff5f5c5d36125b548": [
+        "Down",
+        "End",
+        "Left",
+        "Right",
+        "Start",
+        "Up"
       ]
     },
     "enum:TextInputAction": {
@@ -2645,6 +2898,13 @@
         "Grayscale",
         "PlatformDefault",
         "Subpixel"
+      ]
+    },
+    "enum:TextSelectionKind": {
+      "7a54f581c9c4f62e15bba1b90a2b314d0a38701ab8e4a8dafceb47e6fa87b3e7": [
+        "HardLine",
+        "VisualLine",
+        "Word"
       ]
     },
     "enum:TextTransform": {
@@ -2763,6 +3023,16 @@
         "Start"
       ]
     },
+    "enum:UnicodeBidi": {
+      "e59675a4859a8ae68b2a7fb43904c1bc493a73d7f20588481ffcc1093d08469c": [
+        "BidiOverride",
+        "Embed",
+        "Isolate",
+        "IsolateOverride",
+        "Normal",
+        "Plaintext"
+      ]
+    },
     "enum:UpdateStatus": {
       "61684356a2a1183525ec4c0fcc27d236bcaa1778cfe10161846b18fdeea5a28d": [
         "Checking",
@@ -2779,6 +3049,14 @@
         "Idle",
         "ReadyToInstall",
         "UpdateAvailable (  )"
+      ]
+    },
+    "enum:VerticalAlign": {
+      "afd17ba5bb73e64ddcd5516f7737a645fa69acede5fcab1f12869fdb5aa52b13": [
+        "Baseline",
+        "Bottom",
+        "Middle",
+        "Top"
       ]
     },
     "enum:Visibility": {
@@ -2803,6 +3081,12 @@
         "NativeSnapshotEvidence {  }",
         "RoadmapWork {  }",
         "SupportDiagnostics (  )"
+      ]
+    },
+    "enum:VisualDirection": {
+      "fd64c1c33c54b1acd77a88c703270bb746f1930b6dd5e1900be6f8db8388fc2e": [
+        "Left",
+        "Right"
       ]
     },
     "enum:WebViewBackend": {
@@ -2953,6 +3237,11 @@
       "645e6f3ec06a182ddd58fb80223a1c108f86874341f1cf662c3d4690f089009c": [
         "Local",
         "Session"
+      ]
+    },
+    "enum:WebWindowBackground": {
+      "7339ef873439be13774ca9e4d6260a9cedc8c22ec710da398b30294eca139f9d": [
+        "Opaque"
       ]
     },
     "enum:WhiteSpace": {
@@ -3176,6 +3465,15 @@
       "b53ce0626b343a2b5804099a5ed0e40328a8e568083c944a17840ebed12a53df": [
         "Headless",
         "Windowed (  )"
+      ]
+    },
+    "enum:WindowsWindowBackground": {
+      "39cfb86466512bd11dab4bc9b6a91e4c37eedd56119857093a8e793822827bf4": [
+        "Blurred",
+        "MicaAltBackdrop",
+        "MicaBackdrop",
+        "Opaque",
+        "Transparent"
       ]
     },
     "enum:WorkspaceOpenNextAction": {
@@ -3485,6 +3783,33 @@
         "Queued",
         "Retrying {  }",
         "Running"
+      ]
+    },
+    "enum:bench_metrics::AllocationMetric": {
+      "7344c890c61a284c8b0c03346fbf25979a07a18dfb601df5079e2364ac1aec6c": [
+        "AllocatedBytes",
+        "Allocations"
+      ]
+    },
+    "enum:bench_metrics::HardwareEvent": {
+      "41f712c66ed23bf72463205086f2721bb7378fd5a9630210b918f9632cad4df5": [
+        "BranchMisses",
+        "CacheMisses",
+        "CacheReferences",
+        "Cycles",
+        "Instructions"
+      ]
+    },
+    "enum:bench_metrics::MetricScope": {
+      "a03f60d335f8ace0d6ebd9a74792c0724a66bf4c9814bf4c8e0b9c255581bfaf": [
+        "CallingThread",
+        "Process"
+      ]
+    },
+    "enum:bench_metrics::ResourceMetric": {
+      "7a7404c08dd68bcff88e151b827be6cdaaa1ea7ce0480490bc0ad938accde59b": [
+        "MinorPageFaults",
+        "VoluntaryContextSwitches"
       ]
     },
     "enum:benchmark::BenchmarkEvidenceIssue": {
@@ -5065,7 +5390,22 @@
     "struct:AnchoredState": {
       "bd2f1a8a6477e3f9bce704c055f52b73f73237c700a6a5f9c99998500ad4e774": []
     },
+    "struct:Animated": {
+      "7d55337065c829d971b7658a20cbdf5d23dc1d6c7abc94ffbaad0ca15115c460": []
+    },
+    "struct:AnimatedSample": {
+      "30acdda27c16bd738bc568d9547602c84481dcc50cb79376f1742d5de2a7f7f0": [
+        "is_active : bool",
+        "progress : Progress",
+        "value : T"
+      ]
+    },
     "struct:Animation": {
+      "15138a8ef0b10a405d810b0b37ac865645b97f5b4ebcdda3ca2e4e1d1e395564": [
+        "max_fps : Option < f32 >",
+        "motion : Motion",
+        "synced : bool"
+      ],
       "52e03452e38b638d3284f53724558ed0087852a2113ad2ab5c83a8b5ddb46d55": [
         "duration : Duration",
         "easing : Rc < dyn Fn (f32) -> f32 >",
@@ -5358,6 +5698,9 @@
     "struct:ArenaClearNeeded": {
       "437d9513fb92cea4e8ed1f31c5cf2b5be45594b15c5031b44fe6fc2e68259a86": []
     },
+    "struct:AssetRegistry": {
+      "5d0e414d84f60dada4f09e81a6e40e17bf44650449045e536e7c565321b78833": []
+    },
     "struct:AsyncApp": {
       "3e3b04f765e68fb3d8de06ef5f8065a6cb90bb34e9679b66b36c4e6a34cc582a": []
     },
@@ -5452,6 +5795,15 @@
         "filters : SmallVec < [ScaledFilter ; 4] >",
         "opacity : f32",
         "order : DrawOrder"
+      ],
+      "7788fb166ace067bdd987d27aa3b3b9baaad0fd745317e7ad0bf33120fb546fb": [
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "corner_radii : Corners < ScaledPixels >",
+        "corner_smoothing : f32",
+        "filters : SmallVec < [ScaledFilter ; 4] >",
+        "opacity : f32",
+        "order : DrawOrder"
       ]
     },
     "struct:Background": {
@@ -5503,6 +5855,13 @@
       "5545b9283235d3913f27b9f5465ef7991a890ebd0bc6527651fe52b2deab17b3": [
         "blur_radius : Pixels",
         "color : Hsla",
+        "offset : Point < Pixels >",
+        "spread_radius : Pixels"
+      ],
+      "6a65560ca226f70d83304f7ac0cdf0250212be927045372d83f4b977c6938092": [
+        "blur_radius : Pixels",
+        "color : Background",
+        "inset : bool",
         "offset : Point < Pixels >",
         "spread_radius : Pixels"
       ],
@@ -5560,6 +5919,24 @@
     "struct:Capslock": {
       "fc52bd51271f334b081c517bc01a492ef31403481a360bd7d241e56b7f5fb34f": [
         "on : bool"
+      ]
+    },
+    "struct:CaretMovement": {
+      "f6bed2d416aa6e707c32db9a2314d96fe36737c7ceb250a147d7d7a22467d576": [
+        "result : T",
+        "vertical_navigation_x : Option < Pixels >"
+      ]
+    },
+    "struct:CaretPosition": {
+      "5ecd9cb173eeedb6ba7589ebdba0a59e7cdd28151800bdcf4b9dd5c3ae5b0d3c": [
+        "affinity : CaretAffinity",
+        "index : usize"
+      ]
+    },
+    "struct:CaretSelection": {
+      "f26754fd565c5045df4adf3a49321320fb1f4b528ce75e3164eea4acefe4d5c5": [
+        "anchor : CaretPosition",
+        "caret : CaretPosition"
       ]
     },
     "struct:Checkbox": {
@@ -5629,6 +6006,10 @@
       "b91708387992eec4f02a41d86a451779ca8681b26608128784562262a3723f4f": []
     },
     "struct:ContentMask": {
+      "38103907aaa178b2e40ff0505f19648263b80380f5fef52f361c4f00380a2a2a": [
+        "bounds : Bounds < P >",
+        "fade_out : Edges < P >"
+      ],
       "d88eaeb7727a8fd5610dfe1883b3d9167d6665f205c79f482a5ea1c4e7a21e6b": [
         "bounds : Bounds < P >"
       ]
@@ -5992,11 +6373,27 @@
         "element : E"
       ]
     },
+    "struct:DropListener": {
+      "9d4db07b8adbdeaccb069902f93c57efb38579bb0fec87c2f873516a7c8f057f": [
+        "can_drop : Option < CanDropListenerFn < T > >",
+        "on_drag_over : Option < OnDragOverFn < T > >",
+        "on_drop : Option < OnDropFn < T > >"
+      ]
+    },
+    "struct:DuplicateAssetPath": {
+      "a4b582c7dab2af55d7a7cb71aaa718231f736448930bacdef5df909e753753d5": []
+    },
     "struct:DuplicateLaunchHandoff": {
       "4154f2900a58f1adb1398ae23897ea58baf70b3d15239248af0c07b9652e214f": []
     },
     "struct:DuplicateLaunchPayload": {
       "3b312fa815dfa74d79fb3e2d6321b6e98b8c80426cffe21a134619ff0b679de8": []
+    },
+    "struct:DurationDescription": {
+      "1256ad3d9ce9e94b4212335b811f4fdd280f202fd499a053ff984e9f3326f176": []
+    },
+    "struct:Easing": {
+      "1e921f0e8cdedfb435c4341c8597ab8c854157da12a3191375c49af8aa0742f8": []
     },
     "struct:EdgeFade": {
       "a4d4a589c4045f3f12c1afd4031dc7de1e5584e0cbd1d8c52a870d7d1bde1808": [
@@ -6156,6 +6553,16 @@
       "63a5278f4f7580054d366264f89631aa801ecfaa04738a7a4b38d9453a6a85e9": []
     },
     "struct:FilterBoundary": {
+      "6b4e433ec00cdd38352673af713e2739bbf961ff7748c2b5df51476fca4c64ae": [
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "corner_radii : Corners < ScaledPixels >",
+        "corner_smoothing : f32",
+        "filters : SmallVec < [ScaledFilter ; 4] >",
+        "is_start : bool",
+        "opacity : f32",
+        "order : DrawOrder"
+      ],
       "e9b7bc29511fa911bf81dd81179befa90b3c95b3abe9c40ade93bc2784290799": [
         "bounds : Bounds < ScaledPixels >",
         "content_mask : ContentMask < ScaledPixels >",
@@ -6165,6 +6572,9 @@
         "opacity : f32",
         "order : DrawOrder"
       ]
+    },
+    "struct:FilterTargetIndex": {
+      "b5b63152ef568079810faac4f1dc9b84e5cadbcc5e9a3cb65db70442a9b8b429": []
     },
     "struct:FindZoomHandoff": {
       "6a7323c6f96ab658a987d5a57371c5ae7c8b8497225cd2865b263732343cd565": []
@@ -6210,6 +6620,14 @@
       "18b15e15bb1843aacfb91cd3442134d2aecf2aad5941d14d54c1d1a68f750fe0": []
     },
     "struct:Font": {
+      "512857d4c18b39906714da7450c0f1806326211274533c149478594ea7676cce": [
+        "fallbacks : Option < FontFallbacks >",
+        "family : SharedString",
+        "features : FontFeatures",
+        "style : FontStyle",
+        "weight : FontWeight",
+        "width : FontWidth"
+      ],
       "cd947ac286416328e988516ae8ed8c76b07e91ea8dacd1f700464d538a020a34": [
         "fallbacks : Option < FontFallbacks >",
         "family : SharedString",
@@ -6275,11 +6693,19 @@
         "f32"
       ]
     },
+    "struct:FontWidth": {
+      "1bcda980404fd99c2e26421e96e8fd9ec8aeb0cf9b7d727d601b7ec35a65f823": [
+        "f32"
+      ]
+    },
     "struct:ForegroundExecutor": {
       "665f5a32e6336bd2dc053140ecfa9a823e6d04201942bd57a47104805a6c111f": [],
       "92395ff25395eb766a78ed3ce24f78c8e7244318b116e47c2e4073b639ad3d3c": [
         "dispatcher : Arc < dyn PlatformDispatcher >"
       ]
+    },
+    "struct:ForegroundTaskRetirement": {
+      "3d0486890fc603faf5874cdafc83ba92e433d6158f9a283a2c9f588e0f49fd34": []
     },
     "struct:FormFieldDescriptor": {
       "df875664aa9528578605b46425168edb9dd7c0d6afbc1730c551cbd668799e50": []
@@ -6366,6 +6792,16 @@
     },
     "struct:GlobalRemovalBuilder": {
       "f6acb3fd1a0e85c8fb3b9bff65dd9c3574a1927e391f8dfc5d84e3e0fd530866": []
+    },
+    "struct:GlyphAtlasCache": {
+      "c57a3b91956e14211d74e9d342728124485bc4b05657afa7a3ca07695935591b": []
+    },
+    "struct:GlyphAtlasEntry": {
+      "a7697cf14aebfd7a28616cb5ce075891b45ebbf53d28b1c63447894b2a350368": [
+        "bounds : Bounds < DevicePixels >",
+        "format : RasterizedGlyphFormat",
+        "tile : Option < crate :: AtlasTile >"
+      ]
     },
     "struct:GlyphId": {
       "90a996d792a367c8e0dd36949812d28b6c02817d5925d4b6077ffdc6b68271ce": [],
@@ -6457,7 +6893,23 @@
         "font_weight : Option < FontWeight >",
         "strikethrough : Option < StrikethroughStyle >",
         "underline : Option < UnderlineStyle >"
+      ],
+      "8000e60e560da1c657005c0f332fceb08ac8e938e9ff24b31ea6b0b6a5a35bfa": [
+        "background_color : Option < Hsla >",
+        "color : Option < Hsla >",
+        "fade_out : Option < f32 >",
+        "font_style : Option < FontStyle >",
+        "font_weight : Option < FontWeight >",
+        "font_width : Option < FontWidth >",
+        "strikethrough : Option < StrikethroughStyle >",
+        "underline : Option < UnderlineStyle >"
       ]
+    },
+    "struct:HitTest": {
+      "d8d65bac5079cb0609cdaaa46a0b5bde55616b5252f76f409f163192aced6667": []
+    },
+    "struct:HitTestEntry": {
+      "a4135d7ca75e2df809b4b8bbbd5d3c56db459b8d30eac4b64b020b73a973b108": []
     },
     "struct:Hitbox": {
       "5052a63568d03e860745b09a21ff7ba0480fe9d19d376936d5fce815b1b846d2": [
@@ -6465,6 +6917,14 @@
         "bounds : Bounds < Pixels >",
         "content_mask : ContentMask < Pixels >",
         "id : HitboxId"
+      ],
+      "dfb728386b76ce59dec3538f88fbe31e4baa59cbeb49aefae6b6621de8b5323b": [
+        "behavior : HitboxBehavior",
+        "bounds : Bounds < Pixels >",
+        "content_mask : ContentMask < Pixels >",
+        "fragments : Option < Arc < [Bounds < Pixels >] > >",
+        "id : HitboxId",
+        "tags : Vec < SharedString >"
       ]
     },
     "struct:HitboxId": {
@@ -6521,6 +6981,70 @@
     "struct:ImgLayoutState": {
       "66b2687076e2c3db783090f1ade481bc7dafdd0a481f56bf40cd7f2de0c79c3b": []
     },
+    "struct:InlineBidiScope": {
+      "b72fe8419f0b79b3217bdd4702108420a59df9cac4c7727337fda70d3ab5c1d2": [
+        "direction : ResolvedDirection",
+        "range : Range < usize >",
+        "unicode_bidi : UnicodeBidi"
+      ]
+    },
+    "struct:InlineBoxRequest": {
+      "b9113da9a10c4a7bfa5d6d2cc2cf6169eb8fea7c8390b7d555a5c23b820dc64f": [
+        "id : u64",
+        "index : usize",
+        "size : Size < Pixels >",
+        "vertical_align : crate :: VerticalAlign"
+      ]
+    },
+    "struct:InlineLayout": {
+      "2180688f618f6e17d44dd8d6770a4ba37cf4c83bd2ead2bac2347dbcec82e1bc": [
+        "alignment_offset : Pixels",
+        "boxes : Vec < PositionedInlineBox >",
+        "layout : Arc < LineLayout >",
+        "lines : Vec < InlineVisualLine >",
+        "size : Size < Pixels >"
+      ]
+    },
+    "struct:InlineLayoutRequest": {
+      "7f785e32242bc210da8e1991c2c5c08ef2fff339c3134d90f29a53a41e5ef8c4": [
+        "bidi_scopes : & 'a [InlineBidiScope]",
+        "boxes : & 'a [InlineBoxRequest]",
+        "font_size : Pixels",
+        "line_height : Pixels",
+        "options : TextLayoutOptions",
+        "runs : & 'a [TextRun]",
+        "text : & 'a str",
+        "text_metrics : InlineTextMetrics",
+        "text_styles : & 'a [InlineTextStyle]"
+      ]
+    },
+    "struct:InlineRangeGeometry": {
+      "a45ed09f35d2cee0614589ada75d08bffcc52ccc6b14e684c49c550c9d7db51f": [
+        "bounds : Bounds < Pixels >",
+        "visual_line_index : usize"
+      ]
+    },
+    "struct:InlineTextMetrics": {
+      "1deb5610264cf6a5f03b51f395cf519f33a897c80076108d413a01ca29b19a6a": [
+        "ascent : Pixels",
+        "descent : Pixels",
+        "x_height : Pixels"
+      ]
+    },
+    "struct:InlineTextStyle": {
+      "37abaa0db44d62fd5cc7cb935305b3da471e27aa342b2c1d396d8cbf09a6094b": [
+        "font_size : Pixels",
+        "line_height : Pixels",
+        "range : Range < usize >"
+      ]
+    },
+    "struct:InlineVisualLine": {
+      "49c202da1e09e688fa50da4f848935c676cb5a96c0dfeb99d18a5bbbb2e93883": [
+        "baseline : Pixels",
+        "origin : Point < Pixels >",
+        "size : Size < Pixels >"
+      ]
+    },
     "struct:InputLatencySnapshot": {
       "e1f141ce7087739646a273f9f26649d9b7965ee24bbf57e0cb1674aef384ca2b": [
         "events_per_frame_histogram : Histogram < u64 >",
@@ -6567,6 +7091,12 @@
         "base_style : Box < StyleRefinement >",
         "element_id : Option < ElementId >",
         "hovered : Option < bool >"
+      ]
+    },
+    "struct:InteractivityPrepaint": {
+      "6b9402c3b10f193938512bbf6d640c9828366a753cdb895332bb33525a83a8be": [
+        "bounds : Bounds < Pixels >",
+        "content_size : Size < Pixels >"
       ]
     },
     "struct:InvalidKeystrokeError": {
@@ -6739,9 +7269,20 @@
     },
     "struct:LeakDetectorSnapshot": {
       "3b56756330f1d658ec9128868b7d3b8218fbffd30af44cfd25a6740f29c8d3fb": [],
+      "44f9fbb0a4b446c0cb90e85576f5803d084323d4e26f554f3ac7b3934fbbbb13": [],
       "a266fe9868cc0dd3968e1625c7bc1f83a569a97f6c28db5ad6cc60637cade33d": []
     },
     "struct:LineLayout": {
+      "1fe5671a6711c1d48597f1dc83da2f73e1adf380ccb8121e62a004ae5433c623": [
+        "ascent : Pixels",
+        "descent : Pixels",
+        "font_size : Pixels",
+        "len : usize",
+        "paint_fragments : Vec < PaintFragment >",
+        "platform_layout : Arc < dyn PlatformTextLayout >",
+        "visual_lines : SmallVec < [VisualLine ; 1] >",
+        "width : Pixels"
+      ],
       "3f62caf3d250265e3503429972932dcf3eb107454ecd6de59cf197b95a40f9f4": [
         "ascent : Pixels",
         "descent : Pixels",
@@ -7017,6 +7558,15 @@
       ]
     },
     "struct:MonochromeSprite": {
+      "5f837cc746cd36aa2e3df88c7bbda47b76bcae22f87edf4b17c5cb16903daab6": [
+        "bounds : Bounds < ScaledPixels >",
+        "color : SceneHsla",
+        "content_mask : ContentMask < ScaledPixels >",
+        "order : DrawOrder",
+        "padding : u32",
+        "tile : AtlasTile",
+        "transformation : TransformationMatrix"
+      ],
       "8b8c4cc1950516849bdca1d03d2dba2067c7067a6916f090ee6b9d7f45f85e89": [
         "bounds : Bounds < ScaledPixels >",
         "color : SceneHsla",
@@ -7034,6 +7584,22 @@
         "pad : u32",
         "tile : AtlasTile",
         "transformation : TransformationMatrix"
+      ]
+    },
+    "struct:Motion": {
+      "d146bdb15fe428e80795e1ee4313b6ac8f059304ad3055e0a91ff199f85c748c": []
+    },
+    "struct:MotionPass": {
+      "d1d0f23f8d01db08d1e6a9e01aa8431c29c2b890886dbe30b96645b9923bc920": []
+    },
+    "struct:MotionSample": {
+      "9878deff58c3baea8d1456770895e4608989b3057cc0a1d2a3e2dcd5d7dd5cf7": [
+        "direction : PassDirection",
+        "is_active : bool",
+        "iteration : u128",
+        "local_time : Progress",
+        "phase : MotionPhase",
+        "progress : Progress"
       ]
     },
     "struct:MouseClickEvent": {
@@ -7208,7 +7774,30 @@
     "struct:PaddedBool32": {
       "8621e49b91605c7ba49b3848b9a10b0088097c41f163b884d70c22ebf049c0b4": []
     },
+    "struct:PaintFragment": {
+      "e6dd37ba7a051e3f20604adff7981f4e5f29952624c2cf61e3bdc1b19d592b07": [
+        "font_id : FontId",
+        "font_size : Pixels",
+        "glyphs : Arc < [ShapedGlyph] >",
+        "source_run : usize",
+        "strikethrough_offset : Option < Pixels >",
+        "style : PaintStyle",
+        "underline_offset : Option < Pixels >",
+        "x_range : Range < Pixels >"
+      ]
+    },
     "struct:PaintQuad": {
+      "0cd4a064395ea9122b1dfac9283598b96f4397883eb1f4ad0eaec31c8c7f4516": [
+        "background : Background",
+        "border_color : Background",
+        "border_dashed_gap : f32",
+        "border_dashed_length : f32",
+        "border_style : BorderStyle",
+        "border_widths : Edges < Pixels >",
+        "bounds : Bounds < Pixels >",
+        "corner_radii : Corners < Pixels >",
+        "corner_smoothing : f32"
+      ],
       "1e4a1ff7f34dca2d7f2f62a85e8f1fa1eb9a6e399aa30f0c0f07f55702a1eede": [
         "background : Background",
         "blend_mode : BlendMode",
@@ -7240,7 +7829,21 @@
         "corner_radii : Corners < Pixels >"
       ]
     },
+    "struct:PaintStyle": {
+      "318bfac21f9cb0750b1ccdfb1517ec113c3bf5bfa1b47a684601eece40d9de6c": [
+        "background_color : Option < Hsla >",
+        "color : Hsla",
+        "strikethrough : Option < StrikethroughStyle >",
+        "underline : Option < UnderlineStyle >"
+      ]
+    },
     "struct:PaintSurface": {
+      "701bb2900e790ce5ccc0e94d343db2d9e0e3d9fe59bf04f02553c95ecd7fd383": [
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "order : DrawOrder",
+        "source : crate :: SurfaceSource"
+      ],
       "745f7da4a83785c0a0312f61d100bbc92f11d4e1980a9c940b7fde3dc58b5cf1": [
         "[cfg (target_os = \"macos\")] image_buffer : core_video :: pixel_buffer :: CVPixelBuffer",
         "bounds : Bounds < ScaledPixels >",
@@ -7429,6 +8032,9 @@
         "placements : Vec < PlatformViewPlacement >"
       ]
     },
+    "struct:Playback": {
+      "ce4002cfb6dd984cb887e2aaae5fa69e2b7a474a0eb38e09b31bc1f72513d502": []
+    },
     "struct:Point": {
       "cef5fd163009239b12ee4ff41c548e3b3a07951fe57f8c54b202bdfcfbad465d": [
         "x : T",
@@ -7492,6 +8098,16 @@
         "pad : u32",
         "tile : AtlasTile"
       ],
+      "b8b5f0a11a1f4bb30fe028ea8481e94744a1732676f01b5819fdf8af8fbc996d": [
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "corner_radii : Corners < ScaledPixels >",
+        "corner_smoothing : f32",
+        "grayscale : ShaderBool",
+        "opacity : f32",
+        "order : DrawOrder",
+        "tile : AtlasTile"
+      ],
       "c79b5f30a6a11a5bbe3ed0705e61c38dc96323dd35cf3e532ca7b672271489f1": [
         "bounds : Bounds < ScaledPixels >",
         "content_mask : ContentMask < ScaledPixels >",
@@ -7545,6 +8161,13 @@
         "parent : AnyWindowHandle"
       ]
     },
+    "struct:PositionedInlineBox": {
+      "e71662590df48bfcb2af77ed5c1d884f11d8e7ee8ce8517def09bd80bbe484fd": [
+        "bounds : Bounds < Pixels >",
+        "id : u64",
+        "line_index : usize"
+      ]
+    },
     "struct:PowerSaveBlockerBuilder": {
       "d23f2fffa42521de51f1da32fc8991c969180c6b2318a097c2afb3450ee7c43e": []
     },
@@ -7562,6 +8185,13 @@
     },
     "struct:PowerThemeIdleHandoffBuilder": {
       "1e84256cbe0b52bb80128dd94fc29d777d32a7fb6e9a08e66cdfc70fd96819fc": []
+    },
+    "struct:PreparedRasterStyle": {
+      "68acb1829a9bc466ce0cdca3d39cfee673f8d40deb813e396e5d4c5f9e63e956": [
+        "color_effect : RasterColorEffect",
+        "foreground_dependency : ForegroundDependency",
+        "mode : GlyphRenderMode"
+      ]
     },
     "struct:PrintContext": {
       "bf5d4b05ade9d2bb3b468a640cfd5b0eef0e3589a2d79c18ada23fb223f09664": []
@@ -7594,7 +8224,8 @@
       "e43594fa4537afcb935d90628d83d395702224e1f8a85d1983bd30f2c8208fb0": []
     },
     "struct:Progress": {
-      "7404328084eadb0ee8f26bc47eab51f73ffd3f0405b54f16c26dec22659c13e8": []
+      "7404328084eadb0ee8f26bc47eab51f73ffd3f0405b54f16c26dec22659c13e8": [],
+      "f76a86e33fc7d87590e8183a3c524842686e84f068154d3de69a0086e0dd3236": []
     },
     "struct:ProgressIndicator": {
       "262f64c38b7b8ad51cb61a7493f2bfb9949fab0fa46adb0068bb9df1fed358f2": []
@@ -7619,6 +8250,20 @@
       ]
     },
     "struct:Quad": {
+      "3284bd446d58f17cb0c28b642c1d8ac536362d827a910b9f65f132b4cec5c458": [
+        "background : Background",
+        "border_color : Background",
+        "border_dashed_gap : f32",
+        "border_dashed_length : f32",
+        "border_style : BorderStyle",
+        "border_widths : Edges < ScaledPixels >",
+        "bounds : Bounds < ScaledPixels >",
+        "content_mask : ContentMask < ScaledPixels >",
+        "corner_radii : Corners < ScaledPixels >",
+        "corner_smoothing : f32",
+        "order : DrawOrder",
+        "padding : u32"
+      ],
       "37f59775d27357579659e3fe05d3b218813a4337c06d616774dcc1c2c0cee107": [
         "background : Background",
         "border_color : SceneHsla",
@@ -7665,6 +8310,23 @@
         "value : T"
       ]
     },
+    "struct:RasterStyleRequest": {
+      "02959e2cc451b3dac213e244e901113db3fcc34f3df4bc8fc521cf3712ddc56e": [
+        "font_id : FontId",
+        "foreground_dependency : ForegroundDependency",
+        "glyph_id : GlyphId",
+        "requested_mode : GlyphRenderMode",
+        "scene_color : crate :: Rgba"
+      ]
+    },
+    "struct:RasterizedGlyph": {
+      "1b12b29a0c13b07ca513f4b2dd33253871f70a8b3f399e8dbd3c2f88170702dc": [
+        "bounds : Bounds < DevicePixels >",
+        "format : RasterizedGlyphFormat",
+        "pixels : Vec < u8 >",
+        "size : Size < DevicePixels >"
+      ]
+    },
     "struct:RecentDocumentsBuilder": {
       "5c0adeeeb835fcaf96ee8d48c9f3cd61d717c16419361f10915be3633197fa5d": []
     },
@@ -7682,6 +8344,9 @@
     },
     "struct:RecyclingListRequestLayoutState": {
       "eb3c5eaee1917b9c92e2adccf45abf10ca0a90b7e7e8aa93d8befd05ed458963": []
+    },
+    "struct:Relative": {
+      "02ef58937e3409181f631244b2244b6d38730895da2efe7053e2c2341bd73aea": []
     },
     "struct:Rems": {
       "fb7e51731c753d3a6bdefe0cb69d4efff25576c686dbdccf1bf7b3a8911823f1": [
@@ -7706,6 +8371,14 @@
         "is_emoji : bool",
         "scale_factor : f32",
         "subpixel_rendering : bool",
+        "subpixel_variant : Point < u8 >"
+      ],
+      "eb279f1d8bba0bbae6c1e1f393062a803a61af3716d8faa4096b8378943a7a43": [
+        "font_id : FontId",
+        "font_size : Pixels",
+        "glyph_id : GlyphId",
+        "raster_style : PreparedRasterStyle",
+        "scale_factor : f32",
         "subpixel_variant : Point < u8 >"
       ]
     },
@@ -7750,6 +8423,9 @@
         "size : Size < Pixels >"
       ]
     },
+    "struct:ResizeRegion": {
+      "eb2006c15f088be8a54da6d23bd119b8ee90ead5248295556ae0a02f7a423556": []
+    },
     "struct:ResponsiveLayoutBreakpoint": {
       "3288b61805c63a054de1463c621660118b79bce6fde5fcaee150744512ee973a": []
     },
@@ -7787,6 +8463,12 @@
     },
     "struct:RichTextRequestState": {
       "9fa9e0d6831a006e9ddc9feb3c5e0c8b8cc52b4ba46da642938117596d74f6fa": []
+    },
+    "struct:RingStyle": {
+      "fd0c352a189f6adc441209fcbf911e1317a3724e3c4f4451b6061538f8830af6": [
+        "color : RingColor",
+        "width : Pixels"
+      ]
     },
     "struct:Route": {
       "4c3ea1b5a61b748122e6da9f0fd033706d37d1541008d707a47eb3b21b6b2929": []
@@ -7850,8 +8532,33 @@
         "underlines : Vec < Underline >"
       ]
     },
+    "struct:SceneBufferLayout": {
+      "1143c7cdabd883e63e32de5fc67dee973489741eb7441274944760c5f3ac745b": [
+        "fields : & 'static [(& 'static str , usize)]",
+        "name : & 'static str",
+        "size : usize"
+      ]
+    },
     "struct:SceneHsla": {
       "4cac89b71d2b33de11f8800a16e4a35ff6a25c8054ba4748c59a38362fbdc90e": []
+    },
+    "struct:ScenePlan": {
+      "e91362cd90e91690a6c4330285ac645eeab889113f7ded6a35ce1dcec5b0acb3": []
+    },
+    "struct:ScenePlanRequirements": {
+      "3bf432de1a40f7a9712bf7bb316fa405ba3b4b4098a691d3379fd354b522533e": [
+        "backdrop_filter_count : usize",
+        "command_count : usize",
+        "instance_batch_count : usize",
+        "isolated_filter_count : usize",
+        "isolated_target_count : usize",
+        "path_rasterization_vertex_count : usize",
+        "path_sprite_count : usize",
+        "surface_count : usize",
+        "uses_blur_target : bool",
+        "uses_offscreen_target : bool",
+        "uses_path_target : bool"
+      ]
     },
     "struct:Scope": {
       "90162842bcb0eacd46abc4a298ef052fded37b9d9763b88cecec88aee7c22d31": [],
@@ -8019,6 +8726,18 @@
         "corner_radii : Corners < ScaledPixels >",
         "order : DrawOrder"
       ],
+      "8c5f80b71c35f8d7c2a8f7c633b95788f7efdd30c3c71cc067831c73175805ee": [
+        "blur_radius : ScaledPixels",
+        "bounds : Bounds < ScaledPixels >",
+        "color : Background",
+        "content_mask : ContentMask < ScaledPixels >",
+        "corner_radii : Corners < ScaledPixels >",
+        "corner_smoothing : f32",
+        "element_bounds : Bounds < ScaledPixels >",
+        "element_corner_radii : Corners < ScaledPixels >",
+        "inset : ShaderBool",
+        "order : DrawOrder"
+      ],
       "aef9788a7d5b2d2312d832f3c5e7a51bb6b7e0fd872276c53a027b2862ec1ed7": [
         "blur_radius : ScaledPixels",
         "bounds : Bounds < ScaledPixels >",
@@ -8038,6 +8757,11 @@
         "index : usize",
         "is_emoji : bool",
         "position : Point < Pixels >"
+      ],
+      "bc16b7e7ddcb7207cf8d54c698afec759ca5376cd3c353071e3c6fcf47c6fd9a": [
+        "id : GlyphId",
+        "is_emoji : bool",
+        "position : Point < Pixels >"
       ]
     },
     "struct:ShapedLine": {
@@ -8052,6 +8776,17 @@
       "36f49019a040099ae0b3be6402d3cd3fb544b840b5061742fa3fec07a23987e9": [
         "font_id : FontId",
         "glyphs : Vec < ShapedGlyph >"
+      ]
+    },
+    "struct:ShapedText": {
+      "2bcf1da82cd730271b2d7bb4f88d6672f26a0065bd16bec9153eefee2a293ee8": [
+        "text : SharedString"
+      ]
+    },
+    "struct:ShapedTextLayout": {
+      "7b29f0c32c72c6cb6151698f14ef8c5c4bf725bb4d010518633ff1729b4ce297": [
+        "layout : Arc < LineLayout >",
+        "wrap_width : Option < Pixels >"
       ]
     },
     "struct:SharedString": {
@@ -8144,6 +8879,9 @@
         "mass : f32",
         "stiffness : f32"
       ]
+    },
+    "struct:SpringDescription": {
+      "11b409e6285039e887c4421b03eec8b9557ec55e734c240cd9884163536f02df": []
     },
     "struct:SpringState": {
       "8466c5851dc8ba8631c65cbd60b078c6f51a217e728d51b44ac8d1c151a89038": [
@@ -8394,6 +9132,58 @@
         "text : TextStyleRefinement",
         "visibility : Visibility"
       ],
+      "c0554fb82b14bdb95e5dd5e97ae30e3f4011b4a2e047440112c23f2e507dacf3": [
+        "[cfg (debug_assertions)] debug : bool",
+        "[cfg (debug_assertions)] debug_below : bool",
+        "align_content : Option < AlignContent >",
+        "align_items : Option < AlignItems >",
+        "align_self : Option < AlignSelf >",
+        "allow_concurrent_scroll : bool",
+        "aspect_ratio : Option < f32 >",
+        "backdrop_filter : Vec < Filter >",
+        "background : Option < Fill >",
+        "border_color : Option < Background >",
+        "border_dashed_gap : f32",
+        "border_dashed_length : f32",
+        "border_style : BorderStyle",
+        "border_widths : Edges < AbsoluteLength >",
+        "box_shadow : Vec < BoxShadow >",
+        "corner_radii : Corners < AbsoluteLength >",
+        "corner_smoothing : Option < f32 >",
+        "direction : LayoutDirection",
+        "display : Display",
+        "filter : Vec < Filter >",
+        "flex_basis : Length",
+        "flex_direction : FlexDirection",
+        "flex_grow : f32",
+        "flex_shrink : f32",
+        "flex_wrap : FlexWrap",
+        "gap : Size < DefiniteLength >",
+        "grid_cols : Option < GridTemplate >",
+        "grid_location : Option < GridLocation >",
+        "grid_rows : Option < GridTemplate >",
+        "inset : Edges < Length >",
+        "inset_ring : RingStyle",
+        "justify_content : Option < JustifyContent >",
+        "margin : Edges < Length >",
+        "max_size : Size < Length >",
+        "min_size : Size < Length >",
+        "mouse_cursor : Option < CursorStyle >",
+        "opacity : Option < f32 >",
+        "overflow : Point < Overflow >",
+        "overflow_fade : Edges < AbsoluteLength >",
+        "padding : Edges < DefiniteLength >",
+        "position : Position",
+        "restrict_scroll_to_axis : bool",
+        "ring : RingStyle",
+        "scrollbar_width : AbsoluteLength",
+        "size : Size < Length >",
+        "text : TextStyleRefinement",
+        "unicode_bidi : UnicodeBidi",
+        "unicode_bidi_explicit : bool",
+        "vertical_align : VerticalAlign",
+        "visibility : Visibility"
+      ],
       "e5d8bb55f63a89c145b0bfde52ef22a2b63babdff853bd87fcb9f20689c85b08": [
         "[cfg (debug_assertions)] debug : bool",
         "[cfg (debug_assertions)] debug_below : bool",
@@ -8439,6 +9229,15 @@
       "e5c47ae9b85b6ee36fa236150fa8087da2b64f8ff995278e1e260ddae53d1099": []
     },
     "struct:SubpixelSprite": {
+      "3b60974250887c864d8a527bc6913511e903e5d7b263760f9a96cfb0457f00a2": [
+        "bounds : Bounds < ScaledPixels >",
+        "color : SceneHsla",
+        "content_mask : ContentMask < ScaledPixels >",
+        "order : DrawOrder",
+        "padding : u32",
+        "tile : AtlasTile",
+        "transformation : TransformationMatrix"
+      ],
       "7857a307fff2956bbde71459a5baac133cc0d7344e31928445344bfe908ea26c": [
         "bounds : Bounds < ScaledPixels >",
         "color : Hsla",
@@ -8661,11 +9460,35 @@
     "struct:TextLayout": {
       "197ec49a9ad1aec1e46d7dca099fdfd73f1a27ead97e0e8c53a3b398650025e3": []
     },
+    "struct:TextLayoutOptions": {
+      "2336e603e7a881167cc5498cd60e65dbc1315498ab6d4909fd1f66e17749a98c": [
+        "alignment_width : Option < Pixels >",
+        "direction : ParagraphDirection",
+        "line_clamp : Option < usize >",
+        "text_align : TextAlign",
+        "unicode_bidi : UnicodeBidi",
+        "wrap_width : Option < Pixels >"
+      ]
+    },
+    "struct:TextLayoutRequest": {
+      "58ffd7b4940551b4c18594744a5c0ae33e09705d187ea6dadc8297bb084f5c5f": [
+        "font_size : Pixels",
+        "options : TextLayoutOptions",
+        "runs : & 'a [TextRun]",
+        "text : & 'a str"
+      ]
+    },
     "struct:TextLayoutTruncation": {
       "bd39758eec5d933589e72767cb28cf9b5fb37ea9089212ee1998ffffaf6ed849": [
         "affix : SharedString",
         "source : TruncateFrom",
         "width : Option < Pixels >"
+      ]
+    },
+    "struct:TextMovement": {
+      "c5e30e8b51bdbb2924ef554a4b6bd0d2813f6c37be146ad8da5312622ebb154d": [
+        "boundary : TextBoundary",
+        "direction : TextDirection"
       ]
     },
     "struct:TextRun": {
@@ -8709,6 +9532,26 @@
         "strikethrough : Option < StrikethroughStyle >",
         "text_align : TextAlign",
         "text_overflow : Option < TextOverflow >",
+        "underline : Option < UnderlineStyle >",
+        "white_space : WhiteSpace"
+      ],
+      "ac8c1a6e289d20850a63608db8fa2d2d43e38e1382631453dd08cd53eba24820": [
+        "background_color : Option < Hsla >",
+        "color : Hsla",
+        "font_fallbacks : Option < FontFallbacks >",
+        "font_family : SharedString",
+        "font_features : FontFeatures",
+        "font_size : AbsoluteLength",
+        "font_style : FontStyle",
+        "font_weight : FontWeight",
+        "font_width : FontWidth",
+        "letter_spacing : Option < Pixels >",
+        "line_clamp : Option < usize >",
+        "line_height : DefiniteLength",
+        "strikethrough : Option < StrikethroughStyle >",
+        "text_align : TextAlign",
+        "text_overflow : Option < TextOverflow >",
+        "text_transform : Option < TextTransform >",
         "underline : Option < UnderlineStyle >",
         "white_space : WhiteSpace"
       ],
@@ -8927,6 +9770,16 @@
       ]
     },
     "struct:Underline": {
+      "0604f1f2fca9c91430a0d86ace20b98f35674b1d6371ca29b95c474c29ec020b": [
+        "bounds : Bounds < ScaledPixels >",
+        "clip_bounds : Bounds < ScaledPixels >",
+        "color : SceneHsla",
+        "content_mask : ContentMask < ScaledPixels >",
+        "order : DrawOrder",
+        "padding : u32",
+        "thickness : ScaledPixels",
+        "wavy : ShaderBool"
+      ],
       "31c0d8f922bee6136fa57057a4f4cc3b7edfb2fbd86ad9b4eb70a9bb59e1bce8": [
         "bounds : Bounds < ScaledPixels >",
         "color : Hsla",
@@ -9023,6 +9876,9 @@
     "struct:UserAttentionRequest": {
       "091c28722e4dac9cd39a6e4b5888f6ebc2eb4465111732bc05e02d26e96ada8d": []
     },
+    "struct:ValidatedRasterizedGlyph": {
+      "5506c13e929072e8ed066d253d72f785a081fb9fe5a80f2c5d30e01bf7ca370e": []
+    },
     "struct:ViewElement": {
       "f2b0dfdcd137a7d082bc978b2c535e3f1919bd952cef20c061b2fe6d44c07cd8": []
     },
@@ -9031,6 +9887,15 @@
     },
     "struct:VisualCaptureHandoffBuilder": {
       "d90f24d53f01ed1dde1529bf9adb8de3d232b6672f93932c5c194a40dd4ce813": []
+    },
+    "struct:VisualLine": {
+      "a97302c8849d4e4eb1cd2a4c917080473b10dc3217ceedd637ebb2979565e565": [
+        "advance_width : Pixels",
+        "direction : crate :: ResolvedDirection",
+        "offset : Pixels",
+        "paint_fragment_range : Range < usize >",
+        "text_range : Range < usize >"
+      ]
     },
     "struct:VisualTestAppContext": {
       "6028ef3276b3976f75a13295ef3e54101627532e4b5ed473ecd845a5e0f9663d": [
@@ -9758,6 +10623,29 @@
         "window_bounds : Option < WindowBounds >",
         "window_decorations : Option < WindowDecorations >",
         "window_min_size : Option < Size < Pixels > >"
+      ],
+      "fd309105432bd77b7a27daf460f25ada4004aef2cc9e4a75c346666d84b2c07d": [
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] linux_window_background : LinuxWindowBackground",
+        "[cfg (target_family = \"wasm\")] web_window_background : WebWindowBackground",
+        "[cfg (target_os = \"macos\")] macos_window_background : MacosWindowBackground",
+        "[cfg (target_os = \"windows\")] windows_window_background : WindowsWindowBackground",
+        "app_id : Option < String >",
+        "app_owns_titlebar_drag : bool",
+        "display_id : Option < DisplayId >",
+        "focus : bool",
+        "icon : Option < Arc < image :: RgbaImage > >",
+        "inactive_frame_interval : Option < Duration >",
+        "is_minimizable : bool",
+        "is_movable : bool",
+        "is_resizable : bool",
+        "kind : WindowKind",
+        "show : bool",
+        "tabbing_identifier : Option < String >",
+        "titlebar : Option < TitlebarOptions >",
+        "use_display_p3 : bool",
+        "window_bounds : Option < WindowBounds >",
+        "window_decorations : Option < WindowDecorations >",
+        "window_min_size : Option < Size < Pixels > >"
       ]
     },
     "struct:WindowOptionsBuilder": {
@@ -9797,6 +10685,23 @@
       ],
       "6249ac2cdae3f2bf322e7a51f1d260d372a3aeebea6b2f698006d02b63d4cd0f": [
         "[cfg (target_os = \"macos\")] tabbing_identifier : Option < String >",
+        "bounds : Bounds < Pixels >",
+        "display_id : Option < DisplayId >",
+        "focus : bool",
+        "icon : Option < Arc < image :: RgbaImage > >",
+        "is_minimizable : bool",
+        "is_movable : bool",
+        "is_resizable : bool",
+        "kind : WindowKind",
+        "show : bool",
+        "titlebar : Option < TitlebarOptions >",
+        "window_min_size : Option < Size < Pixels > >"
+      ],
+      "78df5dac40c20f2f0b28efa9c9321ad8a3ee3a9242085d68ef2adff2f618b9eb": [
+        "[cfg (target_os = \"macos\")] tabbing_identifier : Option < String >",
+        "[cfg (target_os = \"macos\")] use_display_p3 : bool",
+        "app_id : Option < String >",
+        "app_owns_titlebar_drag : bool",
         "bounds : Bounds < Pixels >",
         "display_id : Option < DisplayId >",
         "focus : bool",
@@ -9889,6 +10794,9 @@
     },
     "struct:WindowsFileAssociationDeclaration": {
       "d020f9f82c45a4a76029cd9e9550a3be42ecbca2471ae7ec2b82d15dfbdd98da": []
+    },
+    "struct:WindowsScreenCaptureFrame": {
+      "2bccbe74b6abe4b26a12c4bd351bf8bcba468a11dbeef610fc6b895dfd69d90e": []
     },
     "struct:WorkspaceCloseBuilder": {
       "ef05ff691c74ca594cc2556e73d465e2cc7f38cfd1c6c52a28a0ef00b57e95d4": []
@@ -10156,6 +11064,43 @@
         "delay_ms : u64",
         "max_retries : u32"
       ]
+    },
+    "struct:bench_metrics::AllocationCounter": {
+      "3f6cead206959805af339c8f3c4a31e976ebbf37ef2ae4d27acf4838ab558b38": []
+    },
+    "struct:bench_metrics::AllocationStats": {
+      "944a36ff4f3bbd3b653e85bcebd3ebdee306d6d9447143bba2dd4fc7fa28e502": [
+        "allocated_bytes : u64",
+        "allocations : u64",
+        "freed_bytes : u64"
+      ]
+    },
+    "struct:bench_metrics::BenchMeasurement": {
+      "1985a4e540757b6469d1a52de73c9cfecd3bba9e4b9a6ff4273e60a570d10308": []
+    },
+    "struct:bench_metrics::CountFormatter": {
+      "2bbedf96a2e6669e89b3570096bff8255ea82b5914ca370d1642fc7cb56bc915": []
+    },
+    "struct:bench_metrics::CountingAllocator": {
+      "b4d65251c46635c61db0c3fb638e466005945f2f828a2fea257f3945bfa9ce1b": []
+    },
+    "struct:bench_metrics::FakeCounter": {
+      "0bc01913df6749869455ce2fdb90a63532ab04ad4bec03a6f533985f8d7af2fc": []
+    },
+    "struct:bench_metrics::HardwareCounter": {
+      "785dc2a1d20a309b11fe361da9d9812ef3cd4b5fd11fe323f3e7a5bee7e4c49d": []
+    },
+    "struct:bench_metrics::MetricReport": {
+      "35d320dccffefb0e5ef2a84fd1cb958cb44022cb69057791e9d5c567582676ab": []
+    },
+    "struct:bench_metrics::ResourceCounter": {
+      "96547d5757437b355dd9ff66607aa61f6f49c5a73b8747c103c703079e453c23": []
+    },
+    "struct:bench_metrics::darwin::Snapshot": {
+      "ea953f8b7c8d2fe1a95426245eafdfb9069d10fdea0b772db4dbe7ec7045e196": []
+    },
+    "struct:bench_metrics::perf::Snapshot": {
+      "6bb1d08d292beaadddd9f6add93b749648557a601fb94ceaab1b12992be0b1db": []
     },
     "struct:benchmark::BaselineComparisonReport": {
       "4f2efc10d9893271b79becc3dd45958f89125a473bbb2be82e59e4975f719209": [
@@ -13301,6 +14246,24 @@
         "fn update_window<T , F>(& mut self, AnyWindowHandle, F)-> Result < T >where F : FnOnce (AnyView , & mut Window , & mut App) -> T",
         "fn with_window<R>(& mut self, EntityId, impl FnOnce (& mut Window , & mut App) -> R)-> Option < R >"
       ],
+      "2e77c07be218daed128202d979529a6314f199cc844e0e458b24ec6001eff8b0": [
+        "fn as_mut<'a , T>(& 'a mut self, & Entity < T >)-> GpuiBorrow < 'a , T >where T : 'static",
+        "fn background_spawn<R>(& self, impl Future < Output = R > + Send + 'static)-> Task < R >where R : Send + 'static",
+        "fn emit<EntityType , EventType>(& mut self, & Entity < EntityType >, EventType)where EntityType : EventEmitter < EventType > , EventType : 'static",
+        "fn global_entities<T : 'static>(& self)-> impl Iterator < Item = Entity < T > >",
+        "fn insert_entity<T : 'static>(& mut self, Reservation < T >, impl FnOnce (& mut Context < T >) -> T)-> Entity < T >",
+        "fn insert_global_entity<T : 'static>(& mut self, Entity < T >)",
+        "fn new<T : 'static>(& mut self, impl FnOnce (& mut Context < T >) -> T)-> Entity < T >",
+        "fn notify(& mut self, EntityId)",
+        "fn read_entity<T , R>(& self, & Entity < T >, impl FnOnce (& T , & App) -> R)-> Rwhere T : 'static",
+        "fn read_global<G , R>(& self, impl FnOnce (& G , & App) -> R)-> Rwhere G : Global",
+        "fn read_window<T , R>(& self, & WindowHandle < T >, impl FnOnce (Entity < T > , & App) -> R)-> Result < R >where T : 'static",
+        "fn remove_global_entity<T : 'static>(& mut self, & Entity < T >)",
+        "fn reserve_entity<T : 'static>(& mut self)-> Reservation < T >",
+        "fn update_entity<T , R>(& mut self, & Entity < T >, impl FnOnce (& mut T , & mut Context < T >) -> R)-> Rwhere T : 'static",
+        "fn update_window<T , F>(& mut self, AnyWindowHandle, F)-> Result < T >where F : FnOnce (AnyView , & mut Window , & mut App) -> T",
+        "fn with_window<R>(& mut self, EntityId, impl FnOnce (& mut Window , & mut App) -> R)-> Option < R >"
+      ],
       "c6d9afc0bdf4514401b13750701fa0062ebb38fe24a9176866de3bb465737dba": [
         "fn as_mut<'a , T>(& 'a mut self, & Entity < T >)-> GpuiBorrow < 'a , T >where T : 'static",
         "fn background_spawn<R>(& self, impl Future < Output = R > + Send + 'static)-> Task < R >where R : Send + 'static",
@@ -13327,6 +14290,12 @@
       ]
     },
     "trait:AssetSource": {
+      "339545fac0256e2afebeb32e6b3cadd98533ae10c4de23ca3f5e3ed4d152e1a9": [
+        "fn iter_ondemand(self : Arc < Self >)-> Box < dyn Iterator < Item = (SharedString , AssetEntry) > >",
+        "fn iter_preloaded(& self)-> Box < dyn Iterator < Item = (SharedString , AssetEntry) > + '_ >",
+        "fn list(& self, & str)-> Result < Vec < SharedString > >",
+        "fn load(& self, & str)-> Result < Option < Cow < 'static , [u8] > > >"
+      ],
       "33c48bb85aa2fd195eef17f711c7f39e52528536bed5d7d55c24a317dbd2b54f": [
         "fn list(& self, & str)-> Result < Vec < SharedString > >",
         "fn load(& self, & str)-> Result < Option < Cow < 'static , [u8] > > >"
@@ -13356,6 +14325,12 @@
         "fn blend(& self, & Self)-> Selfwhere Self : Sized",
         "fn fade_out(& mut self, f32)",
         "fn opacity(& self, f32)-> Selfwhere Self : Sized"
+      ]
+    },
+    "trait:DurationWithEasing": {
+      "54af4990c041cf7dd32344f832957b2edd95d7840431e7c0fc2fb1949052b85c": [
+        "fn with_easing(self, impl Fn (f32) -> f32 + 'static)-> Motion",
+        "fn with_spring(self, SpringConfig)-> Motion"
       ]
     },
     "trait:Element": {
@@ -13388,6 +14363,20 @@
         "fn a11y_role(& self)-> Option < accesskit :: Role >",
         "fn id(& self)-> Option < ElementId >",
         "fn into_any(self)-> AnyElement",
+        "fn paint(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, Bounds < Pixels >, & mut Self :: RequestLayoutState, & mut Self :: PrepaintState, & mut Window, & mut App)",
+        "fn prepaint(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, Bounds < Pixels >, & mut Self :: RequestLayoutState, & mut Window, & mut App)-> Self :: PrepaintState",
+        "fn request_layout(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, & mut Window, & mut App)-> (LayoutId , Self :: RequestLayoutState)",
+        "fn source_location(& self)-> Option < & 'static panic :: Location < 'static > >",
+        "fn write_a11y_info(& self, & mut accesskit :: Node)",
+        "type PrepaintState: 'static",
+        "type RequestLayoutState: 'static"
+      ],
+      "d8d3dcc261975973f3bf7aef8533766b0c552bf9a02f19f8c3adb4625297c796": [
+        "fn a11y_role(& self)-> Option < accesskit :: Role >",
+        "fn a11y_synthetic_children(& mut self, & mut Self :: PrepaintState, & mut A11ySubtreeBuilder)",
+        "fn id(& self)-> Option < ElementId >",
+        "fn into_any(self)-> AnyElement",
+        "fn is_a11y_hidden(& self)-> bool",
         "fn paint(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, Bounds < Pixels >, & mut Self :: RequestLayoutState, & mut Self :: PrepaintState, & mut Window, & mut App)",
         "fn prepaint(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, Bounds < Pixels >, & mut Self :: RequestLayoutState, & mut Window, & mut App)-> Self :: PrepaintState",
         "fn request_layout(& mut self, Option < & GlobalElementId >, Option < & InspectorElementId >, & mut Window, & mut App)-> (LayoutId , Self :: RequestLayoutState)",
@@ -13469,6 +14458,23 @@
         "fn selected_text_range(& mut self, bool, & mut Window, & mut Context < Self >)-> Option < UTF16Selection >",
         "fn set_selected_text_range(& mut self, Range < usize >, & mut Window, & mut Context < Self >)",
         "fn text_for_range(& mut self, Range < usize >, & mut Option < Range < usize > >, & mut Window, & mut Context < Self >)-> Option < String >",
+        "fn text_length_utf16(& mut self, & mut Window, & mut Context < Self >)-> Option < usize >",
+        "fn unmark_text(& mut self, & mut Window, & mut Context < Self >)"
+      ],
+      "d3cb1ef1020d4ece1fbf75ff9906869dfd11f659908eb8a26711a3d6112eec1a": [
+        "fn accepts_text_input(& self, & mut Window, & mut Context < Self >)-> bool",
+        "fn bounds_for_range(& mut self, Range < usize >, Bounds < Pixels >, & mut Window, & mut Context < Self >)-> Option < Bounds < Pixels > >",
+        "fn character_index_for_point(& mut self, crate :: Point < Pixels >, & mut Window, & mut Context < Self >)-> Option < usize >",
+        "fn marked_text_range(& self, & mut Window, & mut Context < Self >)-> Option < Range < usize > >",
+        "fn paste(& mut self, ClipboardItem, & mut Window, & mut Context < Self >)",
+        "fn replace_and_mark_text_in_range(& mut self, Option < Range < usize > >, & str, Option < Range < usize > >, & mut Window, & mut Context < Self >)",
+        "fn replace_text_in_range(& mut self, Option < Range < usize > >, & str, & mut Window, & mut Context < Self >)",
+        "fn selected_text_range(& mut self, bool, & mut Window, & mut Context < Self >)-> Option < UTF16Selection >",
+        "fn selection_bounds_for_range(& mut self, Range < usize >, Bounds < Pixels >, & mut Window, & mut Context < Self >)-> Vec < Bounds < Pixels > >",
+        "fn set_selected_text_range(& mut self, Range < usize >, & mut Window, & mut Context < Self >)",
+        "fn text_for_range(& mut self, Range < usize >, & mut Option < Range < usize > >, & mut Window, & mut Context < Self >)-> Option < String >",
+        "fn text_input_configuration(& mut self, & mut Window, & mut Context < Self >)-> TextInputConfiguration",
+        "fn text_input_editable_range(& mut self, & mut Window, & mut Context < Self >)-> Option < Range < usize > >",
         "fn text_length_utf16(& mut self, & mut Window, & mut Context < Self >)-> Option < usize >",
         "fn unmark_text(& mut self, & mut Window, & mut Context < Self >)"
       ]
@@ -13581,6 +14587,26 @@
         "fn selected_text_range(& mut self, bool, & mut Window, & mut App)-> Option < UTF16Selection >",
         "fn set_selected_text_range(& mut self, Range < usize >, & mut Window, & mut App)",
         "fn text_for_range(& mut self, Range < usize >, & mut Option < Range < usize > >, & mut Window, & mut App)-> Option < String >",
+        "fn text_length_utf16(& mut self, & mut Window, & mut App)-> Option < usize >",
+        "fn unmark_text(& mut self, & mut Window, & mut App)"
+      ],
+      "9210f79a34896fe74c273baeb52fa100d8f68b3fbb38fd408ac960a235220154": [
+        "fn accepts_text_input(& mut self, & mut Window, & mut App)-> bool",
+        "fn apple_press_and_hold_enabled(& mut self)-> bool",
+        "fn bounds_for_range(& mut self, Range < usize >, & mut Window, & mut App)-> Option < Bounds < Pixels > >",
+        "fn character_index_for_point(& mut self, Point < Pixels >, & mut Window, & mut App)-> Option < usize >",
+        "fn element_bounds(& mut self, & mut Window, & mut App)-> Option < Bounds < Pixels > >",
+        "fn marked_text_range(& mut self, & mut Window, & mut App)-> Option < Range < usize > >",
+        "fn paste(& mut self, ClipboardItem, & mut Window, & mut App)",
+        "fn prefers_ime_for_printable_keys(& mut self, & mut Window, & mut App)-> bool",
+        "fn replace_and_mark_text_in_range(& mut self, Option < Range < usize > >, & str, Option < Range < usize > >, & mut Window, & mut App)",
+        "fn replace_text_in_range(& mut self, Option < Range < usize > >, & str, & mut Window, & mut App)",
+        "fn selected_text_range(& mut self, bool, & mut Window, & mut App)-> Option < UTF16Selection >",
+        "fn selection_bounds_for_range(& mut self, Range < usize >, & mut Window, & mut App)-> Vec < Bounds < Pixels > >",
+        "fn set_selected_text_range(& mut self, Range < usize >, & mut Window, & mut App)",
+        "fn text_for_range(& mut self, Range < usize >, & mut Option < Range < usize > >, & mut Window, & mut App)-> Option < String >",
+        "fn text_input_configuration(& mut self, & mut Window, & mut App)-> TextInputConfiguration",
+        "fn text_input_editable_range(& mut self, & mut Window, & mut App)-> Option < Range < usize > >",
         "fn text_length_utf16(& mut self, & mut Window, & mut App)-> Option < usize >",
         "fn unmark_text(& mut self, & mut Window, & mut App)"
       ],
@@ -14177,6 +15203,62 @@
         "fn track_focus(mut self, & FocusHandle)-> Self",
         "fn window_control_area(mut self, WindowControlArea)-> Self"
       ],
+      "b94b421b776cd41a5ed308d2b4acda4f3bf94ec4305cb6b79d064107b596770d": [
+        "[cfg (any (test , all (debug_assertions , feature = \"test-support\")))] fn debug_selector(mut self, impl FnOnce () -> String)-> Self",
+        "[cfg (not (any (test , all (debug_assertions , feature = \"test-support\"))))] fn debug_selector(self, impl FnOnce () -> String)-> Self",
+        "fn block_mouse_except_scroll(mut self)-> Self",
+        "fn can_drop(mut self, impl Fn (& dyn Any , & mut Window , & mut App) -> bool + 'static)-> Self",
+        "fn capture_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_up(mut self, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn cursor_with(mut self, impl Fn (Point < Pixels > , Bounds < Pixels >) -> Option < CursorStyle > + 'static)-> Selfwhere Self : Sized ,",
+        "fn drag_over<S : 'static>(mut self, impl 'static + Fn (StyleRefinement , & S , & mut Window , & mut App) -> StyleRefinement)-> Self",
+        "fn focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn focus_visible(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn group(mut self, impl Into < SharedString >)-> Self",
+        "fn group_drag_over<S : 'static>(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn group_hover(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn hover(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn id(mut self, impl Into < ElementId >)-> Stateful < Self >",
+        "fn in_focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn interactivity(& mut self)-> & mut Interactivity",
+        "fn key_context<C , E>(mut self, C)-> Selfwhere C : TryInto < KeyContext , Error = E > , E : std :: fmt :: Display ,",
+        "fn occlude(mut self)-> Self",
+        "fn on_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_boxed_action(mut self, & dyn Action, impl Fn (& dyn Action , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drag_move<T : 'static>(mut self, impl Fn (& DragMoveEvent < T > , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drag_over<S : 'static>(mut self, impl 'static + Fn (StyleRefinement , & S , & mut Window , & mut App) -> StyleRefinement)-> Self",
+        "fn on_drag_over_any(mut self, impl 'static + Fn (StyleRefinement , & dyn Any , & mut Window , & mut App) -> StyleRefinement)-> Self",
+        "fn on_drop<T : 'static>(mut self, impl Fn (& T , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drop_alt<T : 'static>(mut self, DropListener < T >)-> Self",
+        "fn on_file_drop_exit(mut self, impl Fn (& FileDropEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_modifiers_changed(mut self, impl Fn (& ModifiersChangedEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down(mut self, MouseButton, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down_all(mut self, impl Fn (& MouseDownEvent , DispatchPhase , & Hitbox , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down_out(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_exit(mut self, impl Fn (& MouseExitEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_move(mut self, impl Fn (& MouseMoveEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_move_all(mut self, impl Fn (& MouseMoveEvent , DispatchPhase , & Hitbox , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up_all(mut self, impl Fn (& MouseUpEvent , DispatchPhase , & Hitbox , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up_out(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_scroll_wheel(mut self, impl Fn (& ScrollWheelEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn tab_group(mut self)-> Self",
+        "fn tab_index(mut self, isize)-> Self",
+        "fn tab_stop(mut self, bool)-> Self",
+        "fn track_focus(mut self, & FocusHandle)-> Self",
+        "fn transitions(mut self, impl FnOnce (StyleTransitions) -> StyleTransitions)-> Self",
+        "fn window_control_area(mut self, WindowControlArea)-> Self"
+      ],
       "c3db516a90a6a0e6ec96cd102d09b12592534a243907ec9fdce8cb4244b4af05": [
         "[cfg (any (test , feature = \"test-support\"))] fn debug_selector(mut self, impl FnOnce () -> String)-> Self",
         "[cfg (not (any (test , feature = \"test-support\")))] fn debug_selector(self, impl FnOnce () -> String)-> Self",
@@ -14328,6 +15410,12 @@
     "trait:MissingGlyphSink": {
       "62acf6f1be828eb07e9a8ecb348093ee7deab98e5d589e3939245a8591b802c1": [
         "fn report(& self, Vec < MissingGlyph >)"
+      ]
+    },
+    "trait:MotionDurationExt": {
+      "54af4990c041cf7dd32344f832957b2edd95d7840431e7c0fc2fb1949052b85c": [
+        "fn with_easing(self, impl Fn (f32) -> f32 + 'static)-> Motion",
+        "fn with_spring(self, SpringConfig)-> Motion"
       ]
     },
     "trait:MouseEvent": {
@@ -14992,6 +16080,88 @@
         "fn write_credentials(& self, & str, & str, & [u8])-> Task < Result < () > >",
         "fn write_to_clipboard(& self, ClipboardItem)"
       ],
+      "b079010596daad91c8b2f1b28031ffa5b6bbd6810079c3f21efa21dd37782d9c": [
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn read_from_primary(& self)-> Option < ClipboardItem >",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn write_to_primary(& self, ClipboardItem)",
+        "[cfg (target_os = \"macos\")] fn read_from_find_pasteboard(& self)-> Option < ClipboardItem >",
+        "[cfg (target_os = \"macos\")] fn write_to_find_pasteboard(& self, ClipboardItem)",
+        "fn activate(& self, bool)",
+        "fn active_window(& self)-> Option < AnyWindowHandle >",
+        "fn add_recent_document(& self, & Path)",
+        "fn app_path(& self)-> Result < PathBuf >",
+        "fn background_executor(& self)-> BackgroundExecutor",
+        "fn button_layout(& self)-> Option < WindowButtonLayout >",
+        "fn can_select_mixed_files_and_dirs(& self)-> bool",
+        "fn compositor_name(& self)-> & 'static str",
+        "fn delete_credentials(& self, & str)-> Task < Result < () > >",
+        "fn dismiss_system_notification(& self, & str)",
+        "fn displays(& self)-> Vec < Rc < dyn PlatformDisplay > >",
+        "fn foreground_executor(& self)-> ForegroundExecutor",
+        "fn gestures(& self)-> Option < Rc < dyn PlatformGestures > >",
+        "fn get_menus(& self)-> Option < Vec < OwnedMenu > >",
+        "fn graphical_environment(& self)-> Option < GraphicalEnvironment >",
+        "fn hide(& self)",
+        "fn hide_cursor_until_mouse_moves(& self)",
+        "fn hide_other_apps(& self)",
+        "fn is_cursor_visible(& self)-> bool",
+        "fn is_screen_capture_supported(& self)-> bool",
+        "fn keyboard_layout(& self)-> Box < dyn PlatformKeyboardLayout >",
+        "fn keyboard_mapper(& self)-> Rc < dyn PlatformKeyboardMapper >",
+        "fn on_app_lifecycle(& self, Box < dyn FnMut (AppLifecyclePhase) >)",
+        "fn on_app_menu_action(& self, Box < dyn FnMut (& dyn Action) >)",
+        "fn on_displays_changed(& self, Box < dyn FnMut () >)",
+        "fn on_keyboard_layout_change(& self, Box < dyn FnMut () >)",
+        "fn on_memory_warning(& self, Box < dyn FnMut () >)",
+        "fn on_open_urls(& self, Box < dyn FnMut (Vec < String >) >)",
+        "fn on_quit(& self, Box < dyn FnMut () -> bool >)",
+        "fn on_reopen(& self, Box < dyn FnMut () >)",
+        "fn on_system_notification_response(& self, Box < dyn FnMut (SystemNotificationResponse) >)",
+        "fn on_system_sleep(& self, Box < dyn FnMut () >)",
+        "fn on_system_wake(& self, Box < dyn FnMut () >)",
+        "fn on_thermal_state_change(& self, Box < dyn FnMut () >)",
+        "fn on_validate_app_menu_command(& self, Box < dyn FnMut (& dyn Action) -> bool >)",
+        "fn on_will_open_app_menu(& self, Box < dyn FnMut () >)",
+        "fn open_url(& self, & str)",
+        "fn open_window(& self, AnyWindowHandle, WindowParams)-> anyhow :: Result < Box < dyn PlatformWindow > >",
+        "fn open_with_system(& self, & Path)",
+        "fn path_for_auxiliary_executable(& self, & str)-> Result < PathBuf >",
+        "fn perform_dock_menu_action(& self, usize)",
+        "fn play_haptic_feedback(& self, HapticFeedbackStyle)",
+        "fn prevent_idle_sleep(& self, & str)-> Task < Result < ActivityGuard > >",
+        "fn primary_display(& self)-> Option < Rc < dyn PlatformDisplay > >",
+        "fn prompt_for_new_path(& self, & Path, Option < & str >)-> oneshot :: Receiver < Result < Option < PathBuf > > >",
+        "fn prompt_for_paths(& self, PathPromptOptions)-> oneshot :: Receiver < Result < Option < Vec < PathBuf > > > >",
+        "fn quit(& self)",
+        "fn read_credentials(& self, & str)-> Task < Result < Option < (String , Vec < u8 >) > > >",
+        "fn read_from_clipboard(& self)-> Option < ClipboardItem >",
+        "fn read_from_clipboard_async(& self)-> Task < Result < Option < ClipboardItem > , ClipboardReadError > >",
+        "fn register_url_scheme(& self, & str)-> Task < Result < () > >",
+        "fn request_windowing(& self, WindowingRequest)-> Task < anyhow :: Result < () > >",
+        "fn restart(& self, Option < PathBuf >, Vec < OsString >)",
+        "fn reveal_path(& self, & Path)",
+        "fn run(& self, Box < dyn 'static + FnOnce () >)",
+        "fn screen_capture_sources(& self)-> oneshot :: Receiver < anyhow :: Result < Vec < Rc < dyn ScreenCaptureSource > > > >",
+        "fn set_activation_policy(& self, ActivationPolicy)",
+        "fn set_app_identity(& self, & str, & str)",
+        "fn set_cursor_style(& self, CursorStyle)",
+        "fn set_dock_menu(& self, Vec < MenuItem >, & Keymap)",
+        "fn set_gpu_requirements(& self, Box < dyn std :: any :: Any >)",
+        "fn set_initial_windowing(& self, WindowingRequest)",
+        "fn set_keyring_label(& self, SharedString)",
+        "fn set_menus(& self, Vec < Menu >, & Keymap)",
+        "fn set_window_appearance(& self, Option < WindowAppearance >)",
+        "fn should_auto_hide_scrollbars(& self)-> bool",
+        "fn show_system_notification(& self, SystemNotification)",
+        "fn supports_haptic_feedback(& self)-> bool",
+        "fn text_system(& self)-> Arc < dyn PlatformTextSystem >",
+        "fn thermal_state(& self)-> ThermalState",
+        "fn unhide_other_apps(& self)",
+        "fn update_jump_list(& self, Vec < MenuItem >, Vec < SmallVec < [PathBuf ; 2] > >)-> Task < Vec < SmallVec < [PathBuf ; 2] > > >",
+        "fn window_appearance(& self)-> WindowAppearance",
+        "fn window_stack(& self)-> Option < Vec < AnyWindowHandle > >",
+        "fn write_credentials(& self, & str, & str, & [u8])-> Task < Result < () > >",
+        "fn write_to_clipboard(& self, ClipboardItem)"
+      ],
       "b5ed51533d854d496ca77d31dd575a8c9eeafe08d427261a69ad915325f785ab": [
         "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn read_from_primary(& self)-> Option < ClipboardItem >",
         "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn write_to_primary(& self, ClipboardItem)",
@@ -15201,6 +16371,12 @@
         "fn get_or_insert_with<'a>(& self, AtlasKey, & mut dyn FnMut () -> Result < Option < (Size < DevicePixels > , Cow < 'a , [u8] >) > >)-> Result < Option < AtlasTile > >",
         "fn remove(& self, & AtlasKey)"
       ],
+      "e0f08950c33cd40de889a678341a3fc3cabe339461354ce0a1c0eeef97c0456d": [
+        "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn contains(& self, & AtlasKey)-> bool",
+        "fn get_or_insert_glyph_with(& self, & RenderGlyphParams, & mut dyn FnMut () -> Result < ValidatedRasterizedGlyph >)-> Result < GlyphAtlasEntry >",
+        "fn get_or_insert_with<'a>(& self, AtlasKey, & mut dyn FnMut () -> Result < Option < (Size < DevicePixels > , Cow < 'a , [u8] >) > >)-> Result < Option < AtlasTile > >",
+        "fn remove(& self, & AtlasKey)"
+      ],
       "f65f465ad04724d5874efeb041e23fbfe7e325bfc7551fc263e460ed96bb6690": [
         "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn contains(& self, & AtlasKey)-> bool",
         "fn get_or_insert_with<'a>(& self, & AtlasKey, & mut dyn FnMut () -> Result < Option < (Size < DevicePixels > , Cow < 'a , [u8] >) > >)-> Result < Option < AtlasTile > >",
@@ -15208,6 +16384,27 @@
       ]
     },
     "trait:PlatformDispatcher": {
+      "07017f072f647272161b9a279ef79ea34ada44620823c1cbae70288eb41c5c97": [
+        "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn as_test(& self)-> Option < & TestDispatcher >",
+        "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn as_threaded(& self)-> Option < & ThreadedDispatcher >",
+        "fn begin_local_task_retirement(& self, & Arc < LocalTaskScope >)",
+        "fn create_local_task_scope(& self)-> Option < Arc < LocalTaskScope > >",
+        "fn dispatch(& self, RunnableVariant, Priority)",
+        "fn dispatch_after(& self, Duration, RunnableVariant)",
+        "fn dispatch_local_task(& self, Arc < LocalTaskScope >, RunnableVariant)",
+        "fn dispatch_local_task_cancellation(& self, Arc < LocalTaskScope >, RunnableVariant)",
+        "fn dispatch_local_task_when_idle(& self, Arc < LocalTaskScope >, RunnableVariant, Option < Duration >)",
+        "fn dispatch_on_main_thread(& self, RunnableVariant, Priority)",
+        "fn dispatch_on_main_thread_when_idle(& self, RunnableVariant, Option < Duration >)",
+        "fn drain_local_task_retirements(& self, & Arc < LocalTaskScope >)",
+        "fn finish_local_task_retirement(& self, & Arc < LocalTaskScope >)-> bool",
+        "fn idle_time_remaining(& self)-> Option < Duration >",
+        "fn increase_timer_resolution(& self)-> TimerResolutionGuard",
+        "fn is_main_thread(& self)-> bool",
+        "fn now(& self)-> Instant",
+        "fn prevent_app_nap(& self, & str)-> ActivityGuard",
+        "fn spawn_realtime(& self, Box < dyn FnOnce () + Send >)"
+      ],
       "12733738dad4f4f73fe5ec7f3f500fa82f0b781fe64bf3d1d4e64bd0ae3dd659": [
         "[cfg (any (test , feature = \"bench\"))] fn as_bench(& self)-> Option < & BenchDispatcher >",
         "[cfg (any (test , feature = \"test-support\"))] fn as_test(& self)-> Option < & TestDispatcher >",
@@ -15401,6 +16598,25 @@
         "fn set_visible(& self, bool)-> Result < () >"
       ]
     },
+    "trait:PlatformTextLayout": {
+      "c0aad3bafd67a73f99050cd8853cc3161bde255e45c121abde0adb436f7def8a": [
+        "fn adjacent_visual_caret(& self, CaretPosition, VisualDirection)-> Option < CaretPosition >",
+        "fn byte_index_from_pixel_point(& self, Point < Pixels >, Pixels)-> Result < usize , usize >",
+        "fn caret_bounds(& self, CaretPosition, Pixels)-> Option < Bounds < Pixels > >",
+        "fn caret_from_pixel_point(& self, Point < Pixels >, Pixels)-> Result < CaretPosition , CaretPosition >",
+        "fn caret_movement(& self, CaretPosition, TextMovement, Option < Pixels >)-> CaretMovement",
+        "fn inline_geometry(& self, Range < usize >)-> Option < Vec < InlineRangeGeometry > >",
+        "fn inline_geometry_for_ranges(& self, & [Range < usize >])-> Vec < Vec < InlineRangeGeometry > >",
+        "fn len(& self)-> usize",
+        "fn line_count(& self)-> usize",
+        "fn logical_cluster_after(& self, CaretPosition)-> Option < Range < usize > >",
+        "fn logical_cluster_before(& self, CaretPosition)-> Option < Range < usize > >",
+        "fn normalized_caret(& self, CaretPosition)-> CaretPosition",
+        "fn selection_bounds(& self, Range < usize >, Pixels)-> Vec < Bounds < Pixels > >",
+        "fn selection_from_pixel_point(& self, Point < Pixels >, Pixels, TextSelectionKind)-> Range < usize >",
+        "fn size(& self)-> Size < Pixels >"
+      ]
+    },
     "trait:PlatformTextSystem": {
       "0ea337f6265ebcd282d7e3fbd9deba138a39ea1d33b28095fdc22d85691f775e": [
         "fn add_fonts(& self, Vec < Cow < 'static , [u8] > >)-> Result < () >",
@@ -15444,6 +16660,22 @@
         "fn layout_line(& self, & str, Pixels, & [FontRun])-> LineLayout",
         "fn prewarm_fonts(& self, & [FontId])",
         "fn rasterize_glyph(& self, & RenderGlyphParams, Bounds < DevicePixels >)-> Result < (Size < DevicePixels > , Vec < u8 >) >",
+        "fn recommended_rendering_mode(& self, FontId, Pixels)-> TextRenderingMode",
+        "fn typographic_bounds(& self, FontId, GlyphId)-> Result < Bounds < f32 > >"
+      ],
+      "674d0020ce82d68ae2a0d17f4f4ab68cb841cb076b4849c497d61d13b6139b7a": [
+        "fn add_fonts(& self, Vec < Cow < 'static , [u8] > >)-> Result < () >",
+        "fn advance(& self, FontId, GlyphId)-> Result < Size < f32 > >",
+        "fn all_font_names(& self)-> Vec < String >",
+        "fn font_generation(& self)-> u64",
+        "fn font_id(& self, & Font)-> Result < FontId >",
+        "fn font_metrics(& self, FontId)-> FontMetrics",
+        "fn glyph_for_char(& self, FontId, char)-> Option < GlyphId >",
+        "fn layout_inline(& self, InlineLayoutRequest < '_ >)-> InlineLayout",
+        "fn layout_text(& self, TextLayoutRequest < '_ >)-> LineLayout",
+        "fn prepare_raster_style(& self, RasterStyleRequest)-> PreparedRasterStyle",
+        "fn prewarm_fonts(& self, & [FontId])",
+        "fn rasterize_glyph(& self, & RenderGlyphParams)-> Result < RasterizedGlyph >",
         "fn recommended_rendering_mode(& self, FontId, Pixels)-> TextRenderingMode",
         "fn typographic_bounds(& self, FontId, GlyphId)-> Result < Bounds < f32 > >"
       ],
@@ -16147,6 +17379,112 @@
         "fn toggle_fullscreen(& self)",
         "fn toggle_window_tab_overview(& self)",
         "fn update_ime_position(& self, Bounds < Pixels >)",
+        "fn window_bounds(& self)-> WindowBounds",
+        "fn window_controls(& self)-> WindowControls",
+        "fn window_decorations(& self)-> Decorations",
+        "fn zoom(& self)"
+      ],
+      "87093d7443e2d7bd49dba657b9e819484843f7a57cf860e8804cdcb58ed1e720": [
+        "[cfg (all (target_os = \"linux\" , feature = \"wayland\"))] fn set_exclusive_edge(& self, layer_shell :: Anchor)",
+        "[cfg (any (target_family = \"wasm\" , target_os = \"linux\" , target_os = \"freebsd\" , target_os = \"macos\"))] fn gpu_context_info(& self)-> Option < Box < dyn std :: any :: Any > >",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\" , target_os = \"windows\" , target_os = \"macos\"))] fn gpu_context(& self)-> Option < Box < dyn std :: any :: Any > >",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\" , target_os = \"windows\" , target_os = \"macos\"))] fn gpu_device_lost(& self)-> Option < bool >",
+        "[cfg (any (test , feature = \"test-support\" , feature = \"bench-support\"))] fn as_test(& mut self)-> Option < & mut TestWindow >",
+        "[cfg (any (test , feature = \"test-support\"))] fn render_to_image(& self, & Scene)-> Result < RgbaImage >",
+        "[cfg (target_os = \"macos\")] fn set_traffic_light_position(& self, Point < Pixels >)",
+        "[cfg (target_os = \"windows\")] fn get_raw_handle(& self)-> windows :: Win32 :: Foundation :: HWND",
+        "fn a11y_init(& self, A11yCallbacks)",
+        "fn a11y_tree_update(& self, accesskit :: TreeUpdate)",
+        "fn a11y_update_window_bounds(& self)",
+        "fn activate(& self, Option < & str >)-> bool",
+        "fn appearance(& self)-> WindowAppearance",
+        "fn background_appearance(& self)-> WindowBackgroundAppearance",
+        "fn bounds(& self)-> Bounds < Pixels >",
+        "fn can_start_external_drag(& self)-> bool",
+        "fn capslock(& self)-> Capslock",
+        "fn content_size(& self)-> Size < Pixels >",
+        "fn display(& self)-> Option < Rc < dyn PlatformDisplay > >",
+        "fn draw(& self, & Scene)",
+        "fn frame_waker(& self)-> Option < Rc < dyn Fn () > >",
+        "fn get_title(& self)-> String",
+        "fn gpu_specs(& self)-> Option < GpuSpecs >",
+        "fn hide_soft_keyboard(& self)",
+        "fn inner_window_bounds(& self)-> WindowBounds",
+        "fn insets(& self)-> WindowInsets",
+        "fn is_active(& self)-> bool",
+        "fn is_fullscreen(& self)-> bool",
+        "fn is_hovered(& self)-> bool",
+        "fn is_maximized(& self)-> bool",
+        "fn is_simple_fullscreen(& self)-> bool",
+        "fn is_subpixel_rendering_supported(& self)-> bool",
+        "fn map_window(& mut self)-> anyhow :: Result < () >",
+        "fn merge_all_windows(& self)",
+        "fn minimize(& self)",
+        "fn modifiers(& self)-> Modifiers",
+        "fn mouse_position(& self)-> Point < Pixels >",
+        "fn move_tab_to_new_window(& self)",
+        "fn native_window_state(& self)-> Option < Vec < u8 > >",
+        "fn on_active_status_change(& self, Box < dyn FnMut (bool) >)",
+        "fn on_appearance_changed(& self, Box < dyn FnMut () >)",
+        "fn on_button_layout_changed(& self, Box < dyn FnMut () >)",
+        "fn on_close(& self, Box < dyn FnOnce () >)",
+        "fn on_display_changed(& self, Box < dyn FnMut () >)",
+        "fn on_hit_test_window_control(& self, Box < dyn FnMut () -> Option < WindowControlArea > >)",
+        "fn on_hover_status_change(& self, Box < dyn FnMut (bool) >)",
+        "fn on_input(& self, Box < dyn FnMut (PlatformInput) -> DispatchEventResult >)",
+        "fn on_insets_changed(& self, Box < dyn FnMut (WindowInsets) >)",
+        "fn on_merge_all_windows(& self, Box < dyn FnMut () >)",
+        "fn on_move_tab_to_new_window(& self, Box < dyn FnMut () >)",
+        "fn on_moved(& self, Box < dyn FnMut () >)",
+        "fn on_request_frame(& self, Box < dyn FnMut (RequestFrameOptions) >)",
+        "fn on_resize(& self, Box < dyn FnMut (Size < Pixels > , f32) >)",
+        "fn on_select_next_tab(& self, Box < dyn FnMut () >)",
+        "fn on_select_previous_tab(& self, Box < dyn FnMut () >)",
+        "fn on_should_close(& self, Box < dyn FnMut () -> bool >)",
+        "fn on_toggle_tab_bar(& self, Box < dyn FnMut () >)",
+        "fn on_visibility_change(& self, Box < dyn FnMut (WindowVisibility) >)",
+        "fn on_visual_viewport_changed(& self, Box < dyn FnMut () >)",
+        "fn play_system_bell(& self)",
+        "fn prepare_frame(& self)-> bool",
+        "fn prompt(& self, PromptLevel, & str, Option < & str >, & [PromptButton])-> Option < oneshot :: Receiver < usize > >",
+        "fn request_attention(& self)",
+        "fn request_decorations(& self, WindowDecorations)",
+        "fn resize(& mut self, Size < Pixels >)",
+        "fn restore_native_window_state(& self, & [u8])",
+        "fn scale_factor(& self)-> f32",
+        "fn schedule_frame(& self)",
+        "fn set_app_id(& mut self, & str)",
+        "fn set_back_enabled(& self, bool)",
+        "fn set_back_handler(& self, Box < dyn FnMut () >)",
+        "fn set_background_appearance(& self, WindowBackgroundAppearance)",
+        "fn set_client_inset(& self, Pixels)",
+        "fn set_document_path(& self, Option < & std :: path :: Path >)",
+        "fn set_edited(& mut self, bool)",
+        "fn set_exclusive_zone(& self, Pixels)",
+        "fn set_input_handler(& mut self, PlatformInputHandler)",
+        "fn set_input_region(& self, Option < & [Bounds < Pixels >] >)",
+        "fn set_tabbing_identifier(& self, Option < String >)",
+        "fn set_text_input_configuration(& mut self, TextInputConfiguration)",
+        "fn set_title(& mut self, & str)",
+        "fn set_visible(& self, bool)",
+        "fn show_character_palette(& self)",
+        "fn show_soft_keyboard(& self)",
+        "fn show_window_menu(& self, Point < Pixels >)",
+        "fn sprite_atlas(& self)-> Arc < dyn PlatformAtlas >",
+        "fn start_external_drag(& self, & ExternalDragPayload)-> bool",
+        "fn start_window_move(& self)",
+        "fn start_window_resize(& self, ResizeEdge)",
+        "fn tab_bar_visible(& self)-> bool",
+        "fn tabbed_windows(& self)-> Option < Vec < SystemWindowTab > >",
+        "fn take_input_handler(& mut self)-> Option < PlatformInputHandler >",
+        "fn text_input_state_changed(& self, TextInputStateChange)",
+        "fn titlebar_double_click(& self, bool, bool)",
+        "fn toggle_fullscreen(& self)",
+        "fn toggle_simple_fullscreen(& self)",
+        "fn toggle_window_tab_overview(& self)",
+        "fn update_ime_position(& self, Bounds < Pixels >)",
+        "fn visibility(& self)-> WindowVisibility",
+        "fn visual_viewport_bounds(& self)-> Bounds < Pixels >",
         "fn window_bounds(& self)-> WindowBounds",
         "fn window_controls(& self)-> WindowControls",
         "fn window_decorations(& self)-> Decorations",
@@ -16882,6 +18220,11 @@
     "trait:Prompt": {
       "4f26475290e970288e37bfbf37bed37bd4288cb7696f492f464eac61346103d3": []
     },
+    "trait:RasterColorExt": {
+      "e47919106476c667888be6e9653b7904e051ee4ad1529ff7d59a6e3eb3cdd7ff": [
+        "fn quantize_raster_color(self)-> Rgba8"
+      ]
+    },
     "trait:ReadGlobal": {
       "3ecbb197d940c1af894bf0d85ca289a04e0007f82d1d022315b58d7447ef0b07": [
         "fn global(& App)-> & Self"
@@ -17365,6 +18708,59 @@
         "fn tooltip(mut self, impl TooltipContent)-> Selfwhere Self : Sized ,",
         "fn tooltip_element<E>(mut self, impl Fn () -> E + 'static)-> Selfwhere Self : Sized , E : IntoElement ,",
         "fn tooltip_view(mut self, impl Fn (& mut Window , & mut App) -> AnyView + 'static)-> Selfwhere Self : Sized ,",
+        "fn track_scroll(mut self, & ScrollHandle)-> Self"
+      ],
+      "e43bc9d89f84b02734c4194737ceb9733f2d2c0f8a2cea4450b5cbd6b0344918": [
+        "fn a11y_synthetic_children(mut self, impl FnOnce (& mut crate :: A11ySubtreeBuilder) + 'static)-> Self",
+        "fn accessibility_id(mut self, impl Into < SharedString >)-> Self",
+        "fn active(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn anchor_scroll(mut self, Option < ScrollAnchor >)-> Self",
+        "fn aria_active_descendant(mut self)-> Self",
+        "fn aria_column_count(mut self, usize)-> Self",
+        "fn aria_column_index(mut self, usize)-> Self",
+        "fn aria_description(mut self, impl Into < SharedString >)-> Self",
+        "fn aria_disabled(mut self, bool)-> Self",
+        "fn aria_expanded(mut self, bool)-> Self",
+        "fn aria_hidden(mut self)-> Self",
+        "fn aria_keyshortcuts(mut self, impl Into < SharedString >)-> Self",
+        "fn aria_label(mut self, impl Into < SharedString >)-> Self",
+        "fn aria_level(mut self, usize)-> Self",
+        "fn aria_live(mut self, accesskit :: Live)-> Self",
+        "fn aria_live_atomic(mut self, bool)-> Self",
+        "fn aria_max_numeric_value(mut self, f64)-> Self",
+        "fn aria_min_numeric_value(mut self, f64)-> Self",
+        "fn aria_modal(mut self, bool)-> Self",
+        "fn aria_numeric_value(mut self, f64)-> Self",
+        "fn aria_numeric_value_step(mut self, f64)-> Self",
+        "fn aria_orientation(mut self, accesskit :: Orientation)-> Self",
+        "fn aria_placeholder(mut self, impl Into < SharedString >)-> Self",
+        "fn aria_position_in_set(mut self, usize)-> Self",
+        "fn aria_row_count(mut self, usize)-> Self",
+        "fn aria_row_index(mut self, usize)-> Self",
+        "fn aria_selected(mut self, bool)-> Self",
+        "fn aria_size_of_set(mut self, usize)-> Self",
+        "fn aria_toggled(mut self, accesskit :: Toggled)-> Self",
+        "fn aria_value(mut self, impl Into < SharedString >)-> Self",
+        "fn external_drag_payload<T>(mut self, impl Fn (& T , & mut Window , & mut App) -> Option < ExternalDragPayload > + 'static)-> Selfwhere Self : Sized , T : 'static ,",
+        "fn focusable(mut self)-> Self",
+        "fn group_active(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn hover_listener_mode(mut self, HoverListenerMode)-> Selfwhere Self : Sized ,",
+        "fn hoverable_tooltip(mut self, impl Fn (& mut Window , & mut App) -> AnyView + 'static)-> Selfwhere Self : Sized ,",
+        "fn on_a11y_action(mut self, accesskit :: Action, impl FnMut (Option < & accesskit :: ActionData > , & mut crate :: Window , & mut crate :: App) + 'static)-> Self",
+        "fn on_aux_click(mut self, impl Fn (& ClickEvent , & mut Window , & mut App) + 'static)-> Selfwhere Self : Sized ,",
+        "fn on_click(mut self, impl Fn (& ClickEvent , & mut Window , & mut App) + 'static)-> Selfwhere Self : Sized ,",
+        "fn on_drag<T , W>(mut self, T, impl Fn (& T , Point < Pixels > , & mut Window , & mut App) -> Entity < W > + 'static)-> Selfwhere Self : Sized , T : 'static , W : 'static + Render ,",
+        "fn on_drag_alt<F>(mut self, F)-> Selfwhere Self : Sized , F : 'static + Fn (Point < Pixels > , Option < CursorStyle > , & mut Window , & mut App) -> AnyDrag ,",
+        "fn on_hover(mut self, impl Fn (& bool , & mut Window , & mut App) + 'static)-> Selfwhere Self : Sized ,",
+        "fn on_hover_region<R : PartialEq + 'static>(mut self, impl Fn (Point < Pixels > , Bounds < Pixels >) -> Option < R > + 'static, impl Fn (& Option < R > , & mut Window , & mut App) + 'static)-> Selfwhere Self : Sized ,",
+        "fn on_prepaint(mut self, impl Fn (& InteractivityPrepaint , & mut Window , & mut App) + 'static)-> Selfwhere Self : Sized ,",
+        "fn overflow_scroll(mut self)-> Self",
+        "fn overflow_x_scroll(mut self)-> Self",
+        "fn overflow_y_scroll(mut self)-> Self",
+        "fn restrict_scroll_to_axis(mut self)-> Self",
+        "fn role(mut self, accesskit :: Role)-> Self",
+        "fn tooltip(mut self, impl Fn (& mut Window , & mut App) -> AnyView + 'static)-> Selfwhere Self : Sized ,",
+        "fn tooltip_show_delay(mut self, Duration)-> Selfwhere Self : Sized ,",
         "fn track_scroll(mut self, & ScrollHandle)-> Self"
       ]
     },
@@ -18718,6 +20114,166 @@
         "gpui_macros :: style_helpers ! ()",
         "gpui_macros :: visibility_style_methods ! ()"
       ],
+      "f7b6c043a7698cd61aa5ec301d66a2d7051a7d672cab6ef1abdf79ad6f43a52b": [
+        "[cfg (debug_assertions)] fn debug(mut self)-> Self",
+        "[cfg (debug_assertions)] fn debug_below(mut self)-> Self",
+        "fn align_baseline(self)-> Self",
+        "fn align_bottom(self)-> Self",
+        "fn align_middle(self)-> Self",
+        "fn align_top(self)-> Self",
+        "fn aspect_ratio(mut self, f32)-> Self",
+        "fn aspect_square(mut self)-> Self",
+        "fn backdrop_blur(mut self, impl Into < Pixels >)-> Self",
+        "fn backdrop_filter(mut self, impl Into < Vec < Filter > >)-> Self",
+        "fn bg<F>(mut self, F)-> Selfwhere F : Into < Fill > , Self : Sized ,",
+        "fn block(self)-> Self",
+        "fn blur(mut self, impl Into < Pixels >)-> Self",
+        "fn border_dashed(mut self)-> Self",
+        "fn border_dashed_gap(mut self, f32)-> Self",
+        "fn border_dashed_length(mut self, f32)-> Self",
+        "fn col_end(mut self, i16)-> Self",
+        "fn col_end_auto(mut self)-> Self",
+        "fn col_span(mut self, u16)-> Self",
+        "fn col_span_full(mut self)-> Self",
+        "fn col_start(mut self, i16)-> Self",
+        "fn col_start_auto(mut self)-> Self",
+        "fn content_around(mut self)-> Self",
+        "fn content_between(mut self)-> Self",
+        "fn content_center(mut self)-> Self",
+        "fn content_end(mut self)-> Self",
+        "fn content_evenly(mut self)-> Self",
+        "fn content_normal(mut self)-> Self",
+        "fn content_start(mut self)-> Self",
+        "fn content_stretch(mut self)-> Self",
+        "fn direction(mut self, LayoutDirection)-> Self",
+        "fn display(mut self, Display)-> Self",
+        "fn filter(mut self, impl Into < Vec < Filter > >)-> Self",
+        "fn flex(self)-> Self",
+        "fn flex_1(mut self)-> Self",
+        "fn flex_auto(mut self)-> Self",
+        "fn flex_basis(mut self, impl Into < Length >)-> Self",
+        "fn flex_col(mut self)-> Self",
+        "fn flex_col_reverse(mut self)-> Self",
+        "fn flex_direction(mut self, FlexDirection)-> Self",
+        "fn flex_grow(mut self, f32)-> Self",
+        "fn flex_grow_0(mut self)-> Self",
+        "fn flex_grow_1(mut self)-> Self",
+        "fn flex_initial(mut self)-> Self",
+        "fn flex_none(mut self)-> Self",
+        "fn flex_nowrap(mut self)-> Self",
+        "fn flex_row(mut self)-> Self",
+        "fn flex_row_reverse(mut self)-> Self",
+        "fn flex_shrink(mut self, f32)-> Self",
+        "fn flex_shrink_0(mut self)-> Self",
+        "fn flex_shrink_1(mut self)-> Self",
+        "fn flex_wrap(mut self)-> Self",
+        "fn flex_wrap_reverse(mut self)-> Self",
+        "fn font(mut self, Font)-> Self",
+        "fn font_family(mut self, impl Into < SharedString >)-> Self",
+        "fn font_features(mut self, FontFeatures)-> Self",
+        "fn font_weight(mut self, FontWeight)-> Self",
+        "fn font_width(mut self, impl Into < FontWidth >)-> Self",
+        "fn grid(self)-> Self",
+        "fn grid_cols(mut self, u16)-> Self",
+        "fn grid_cols_max_content(mut self, u16)-> Self",
+        "fn grid_cols_min_content(mut self, u16)-> Self",
+        "fn grid_rows(mut self, u16)-> Self",
+        "fn grid_rows_max_content(mut self, u16)-> Self",
+        "fn grid_rows_min_content(mut self, u16)-> Self",
+        "fn hidden(self)-> Self",
+        "fn inline(self)-> Self",
+        "fn inline_flex(self)-> Self",
+        "fn italic(mut self)-> Self",
+        "fn items_baseline(mut self)-> Self",
+        "fn items_center(mut self)-> Self",
+        "fn items_end(mut self)-> Self",
+        "fn items_start(mut self)-> Self",
+        "fn items_stretch(mut self)-> Self",
+        "fn justify_around(mut self)-> Self",
+        "fn justify_between(mut self)-> Self",
+        "fn justify_center(mut self)-> Self",
+        "fn justify_end(mut self)-> Self",
+        "fn justify_evenly(mut self)-> Self",
+        "fn justify_flex_end(mut self)-> Self",
+        "fn justify_flex_start(mut self)-> Self",
+        "fn justify_start(mut self)-> Self",
+        "fn letter_spacing(mut self, impl Into < Pixels >)-> Self",
+        "fn line_clamp(mut self, usize)-> Self",
+        "fn line_height(mut self, impl Into < DefiniteLength >)-> Self",
+        "fn line_through(mut self)-> Self",
+        "fn ltr(self)-> Self",
+        "fn not_italic(mut self)-> Self",
+        "fn opacity(mut self, f32)-> Self",
+        "fn overflow_fade(mut self, impl Into < Edges < AbsoluteLength > >)-> Self",
+        "fn overflow_fade_x(self, impl Into < AbsoluteLength >)-> Self",
+        "fn overflow_fade_y(self, impl Into < AbsoluteLength >)-> Self",
+        "fn refine_style(mut self, & StyleRefinement)-> Self",
+        "fn rounded_smoothing(mut self, f32)-> Self",
+        "fn rounded_smoothing_ios(mut self)-> Self",
+        "fn row_end(mut self, i16)-> Self",
+        "fn row_end_auto(mut self)-> Self",
+        "fn row_span(mut self, u16)-> Self",
+        "fn row_span_full(mut self)-> Self",
+        "fn row_start(mut self, i16)-> Self",
+        "fn row_start_auto(mut self)-> Self",
+        "fn rtl(self)-> Self",
+        "fn scrollbar_width(mut self, impl Into < AbsoluteLength >)-> Self",
+        "fn self_baseline(mut self)-> Self",
+        "fn self_center(mut self)-> Self",
+        "fn self_end(mut self)-> Self",
+        "fn self_flex_end(mut self)-> Self",
+        "fn self_flex_start(mut self)-> Self",
+        "fn self_start(mut self)-> Self",
+        "fn self_stretch(mut self)-> Self",
+        "fn style(& mut self)-> & mut StyleRefinement",
+        "fn text_2xl(mut self)-> Self",
+        "fn text_3xl(mut self)-> Self",
+        "fn text_align(mut self, TextAlign)-> Self",
+        "fn text_base(mut self)-> Self",
+        "fn text_bg(mut self, impl IntoColor < Hsla >)-> Self",
+        "fn text_center(mut self)-> Self",
+        "fn text_color(mut self, impl IntoColor < Hsla >)-> Self",
+        "fn text_decoration_0(mut self)-> Self",
+        "fn text_decoration_1(mut self)-> Self",
+        "fn text_decoration_2(mut self)-> Self",
+        "fn text_decoration_4(mut self)-> Self",
+        "fn text_decoration_8(mut self)-> Self",
+        "fn text_decoration_color(mut self, impl IntoColor < Hsla >)-> Self",
+        "fn text_decoration_none(mut self)-> Self",
+        "fn text_decoration_solid(mut self)-> Self",
+        "fn text_decoration_wavy(mut self)-> Self",
+        "fn text_ellipsis(mut self)-> Self",
+        "fn text_ellipsis_middle(mut self)-> Self",
+        "fn text_ellipsis_start(mut self)-> Self",
+        "fn text_end(self)-> Self",
+        "fn text_left(mut self)-> Self",
+        "fn text_lg(mut self)-> Self",
+        "fn text_overflow(mut self, TextOverflow)-> Self",
+        "fn text_right(mut self)-> Self",
+        "fn text_size(mut self, impl Into < AbsoluteLength >)-> Self",
+        "fn text_sm(mut self)-> Self",
+        "fn text_start(self)-> Self",
+        "fn text_style(& mut self)-> & mut TextStyleRefinement",
+        "fn text_transform(mut self, TextTransform)-> Self",
+        "fn text_xl(mut self)-> Self",
+        "fn text_xs(mut self)-> Self",
+        "fn truncate(mut self)-> Self",
+        "fn underline(mut self)-> Self",
+        "fn unicode_bidi(mut self, UnicodeBidi)-> Self",
+        "fn vertical_align(mut self, VerticalAlign)-> Self",
+        "fn whitespace(mut self, WhiteSpace)-> Self",
+        "fn whitespace_normal(mut self)-> Self",
+        "fn whitespace_nowrap(mut self)-> Self",
+        "gpui_macros :: border_style_methods ! ()",
+        "gpui_macros :: box_shadow_style_methods ! ()",
+        "gpui_macros :: cursor_style_methods ! ()",
+        "gpui_macros :: margin_style_methods ! ()",
+        "gpui_macros :: overflow_style_methods ! ()",
+        "gpui_macros :: padding_style_methods ! ()",
+        "gpui_macros :: position_style_methods ! ()",
+        "gpui_macros :: style_helpers ! ()",
+        "gpui_macros :: visibility_style_methods ! ()"
+      ],
       "fc10e2f6e85e4c71f27a750029be94b9c0481c58dc3f78003040c6911cb77d9f": [
         "[cfg (debug_assertions)] fn debug(mut self)-> Self",
         "[cfg (debug_assertions)] fn debug_below(mut self)-> Self",
@@ -18861,6 +20417,11 @@
         "fn detach_and_log_err_with_backtrace(self, & App)"
       ]
     },
+    "trait:TextRangeExt": {
+      "5afaffb40606792aff1dce440c06c50b2f7bdbb197a81f5337e915f1eb585f58": [
+        "fn contains_range(& self, & std :: ops :: Range < usize >)-> bool"
+      ]
+    },
     "trait:TooltipContent": {
       "48b26df4efc79cab2393b5234187ec90649bc5024059e04c4b378218d2b6f66a": [
         "fn into_tooltip_renderer(self)-> Rc < dyn Fn (& mut Window , & mut App) -> AnyView + 'static >"
@@ -18936,6 +20497,24 @@
         "fn read_entity<T , R>(& self, & Entity < T >, impl FnOnce (& T , & App) -> R)-> Rwhere T : 'static",
         "fn read_global<G , R>(& self, impl FnOnce (& G , & App) -> R)-> Rwhere G : Global",
         "fn read_window<T , R>(& self, & WindowHandle < T >, impl FnOnce (Entity < T > , & App) -> R)-> Result < R >where T : 'static",
+        "fn reserve_entity<T : 'static>(& mut self)-> Reservation < T >",
+        "fn update_entity<T , R>(& mut self, & Entity < T >, impl FnOnce (& mut T , & mut Context < T >) -> R)-> Rwhere T : 'static",
+        "fn update_window<T , F>(& mut self, AnyWindowHandle, F)-> Result < T >where F : FnOnce (AnyView , & mut Window , & mut App) -> T",
+        "fn with_window<R>(& mut self, EntityId, impl FnOnce (& mut Window , & mut App) -> R)-> Option < R >"
+      ],
+      "2e77c07be218daed128202d979529a6314f199cc844e0e458b24ec6001eff8b0": [
+        "fn as_mut<'a , T>(& 'a mut self, & Entity < T >)-> GpuiBorrow < 'a , T >where T : 'static",
+        "fn background_spawn<R>(& self, impl Future < Output = R > + Send + 'static)-> Task < R >where R : Send + 'static",
+        "fn emit<EntityType , EventType>(& mut self, & Entity < EntityType >, EventType)where EntityType : EventEmitter < EventType > , EventType : 'static",
+        "fn global_entities<T : 'static>(& self)-> impl Iterator < Item = Entity < T > >",
+        "fn insert_entity<T : 'static>(& mut self, Reservation < T >, impl FnOnce (& mut Context < T >) -> T)-> Entity < T >",
+        "fn insert_global_entity<T : 'static>(& mut self, Entity < T >)",
+        "fn new<T : 'static>(& mut self, impl FnOnce (& mut Context < T >) -> T)-> Entity < T >",
+        "fn notify(& mut self, EntityId)",
+        "fn read_entity<T , R>(& self, & Entity < T >, impl FnOnce (& T , & App) -> R)-> Rwhere T : 'static",
+        "fn read_global<G , R>(& self, impl FnOnce (& G , & App) -> R)-> Rwhere G : Global",
+        "fn read_window<T , R>(& self, & WindowHandle < T >, impl FnOnce (Entity < T > , & App) -> R)-> Result < R >where T : 'static",
+        "fn remove_global_entity<T : 'static>(& mut self, & Entity < T >)",
         "fn reserve_entity<T : 'static>(& mut self)-> Reservation < T >",
         "fn update_entity<T , R>(& mut self, & Entity < T >, impl FnOnce (& mut T , & mut Context < T >) -> R)-> Rwhere T : 'static",
         "fn update_window<T , F>(& mut self, AnyWindowHandle, F)-> Result < T >where F : FnOnce (AnyView , & mut Window , & mut App) -> T",
