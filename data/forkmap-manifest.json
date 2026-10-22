@@ -1722,12 +1722,6 @@
       "latest_stable": "1.25.202",
       "versions": [
         {
-          "vers": "0.0.0-reserved",
-          "yanked": false,
-          "prerelease": true,
-          "api_hash": "af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262"
-        },
-        {
           "vers": "1.20.203",
           "yanked": false,
           "prerelease": false,
@@ -2413,10 +2407,6 @@
         "provider": "bite-gpui",
         "entries": [
           {
-            "vers": "0.0.0-reserved",
-            "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"bite-gpui\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"0.0.0-reserved\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"bite-gpui\", version = \"=0.0.0-reserved\" }\n# bite-gpui predates the Feb-2026 platform extraction and ships its own\n# platform layer — the fork alone is the whole engine.\n"
-          },
-          {
             "vers": "1.20.203",
             "cargo_toml": "# Gocar-managed project (schema gocar-2026.1).\n# Do not hand-edit the version pins below; use `cargo gocar add` / `gocar lock`.\n[package]\nname = \"{{project_name}}\"\nversion = \"0.1.0\"\nedition = \"2024\"\npublish = false\n\n# Standalone workspace root: never captured by a parent workspace.\n[workspace]\n\n[package.metadata.gocar]\nschema = \"gocar-2026.1\"\ncontract = \"gpui\"\nprovider = \"bite-gpui\"\n# Minimal Satisfying Version: `cargo gocar lock` pins the oldest admissible\n# non-yanked release >= this floor and never floats above it.\nmin-version = \"1.20.203\"\n\n[dependencies]\n# gpui code is written as `use gpui::…` regardless of the provider; the\n# package binding below is the only thing that changes between forks.\ngpui = { package = \"bite-gpui\", version = \"=1.20.203\" }\n# bite-gpui predates the Feb-2026 platform extraction and ships its own\n# platform layer — the fork alone is the whole engine.\n"
           },
@@ -2485,7 +2475,7 @@
   ],
   "counts": {
     "providers": 8,
-    "versions": 115,
+    "versions": 114,
     "items": 245652,
     "keys": 13943,
     "facades": 20
