@@ -27,7 +27,7 @@ env:
   # The exporter version this data was produced by. Bump deliberately: a new
   # exporter can change the bundle shape, and the viewer's strict schema guard
   # fails loudly on a skew rather than rendering misread data.
-  GOCAR_VERSION: "0.4.0"
+  GOCAR_VERSION: "0.5.1"
   CORPUS_REPO: "gpui-archipelago/gpui-corpus"
 
 jobs:
