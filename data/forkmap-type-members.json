@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-10-22T07:51:00+00:00",
+  "dataset_synced_at": "2026-10-26T08:19:28+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -471,6 +471,14 @@
       "4f6885462f35770dac51e7563b19f9c46cefd11afa014ea5c54f07fb643d3e0e": [
         "Horizontal",
         "Vertical"
+      ]
+    },
+    "enum:BackGesturePhase": {
+      "666a8fca2c8faf382ca69557b17754d5bfe044e4110b85af5db8b2d1870f2f15": [
+        "Cancelled",
+        "Committed",
+        "Progressed",
+        "Started"
       ]
     },
     "enum:BackgroundKind": {
@@ -2097,6 +2105,17 @@
         "UseHostedNavigationBridge"
       ]
     },
+    "enum:OperatingSystem": {
+      "a27474752fbe70fbbbe14ce672780459738bb581d533c3ecd8949e252d1b8fbc": [
+        "Android",
+        "FreeBsd",
+        "Ios",
+        "Linux",
+        "Mac",
+        "Unknown",
+        "Windows"
+      ]
+    },
     "enum:OsAction": {
       "0dfe3833eabe8a20556a9a67b617231397a932747cab64415c6a603cc28d8084": [
         "Copy",
@@ -2296,6 +2315,23 @@
         "ScrollWheel (  )",
         "Touch (  )"
       ],
+      "95015558703209044cdfcad77520a36c69688c1f584c61332bfb23f45bd5c9ed": [
+        "BackGesture (  )",
+        "FileDrop (  )",
+        "KeyDown (  )",
+        "KeyUp (  )",
+        "LongPress (  )",
+        "ModifiersChanged (  )",
+        "MouseDown (  )",
+        "MouseExited (  )",
+        "MouseMove (  )",
+        "MousePressure (  )",
+        "MouseUp (  )",
+        "Pinch (  )",
+        "Scroll (  )",
+        "Touch (  )",
+        "TouchDrag (  )"
+      ],
       "a5baf09e878e1c0e395aa49b02de11f3d6f66f58eaa515b5a328d678d4613c7b": [
         "FileDrop (  )",
         "KeyDown (  )",
@@ -2344,6 +2380,12 @@
         "Separator",
         "Submenu (  )",
         "SystemMenu (  )"
+      ]
+    },
+    "enum:PlatformTarget": {
+      "1920a2e2ffaabbcebacd940429ffe07c0011352fd21dc545f224e309cb6b35bb": [
+        "Native",
+        "Web"
       ]
     },
     "enum:PlaybackState": {
@@ -2731,6 +2773,12 @@
       "9badd22ef5d035af1d0b06b69f6ed7521d6e5fbecf4f462c2030fee1c12adb93": [
         "Exponential {  }",
         "FrictionSpline {  }"
+      ]
+    },
+    "enum:ScrollSource": {
+      "99c2f791738cce6d07ea43ed3383eecc96baf5be600ed860a488ff8dbf3724eb": [
+        "Pointer",
+        "Touch"
       ]
     },
     "enum:ScrollStrategy": {
@@ -6050,6 +6098,13 @@
     "struct:AuxiliaryExecutableBuilder": {
       "7eb4d4a304ea24fec5dcfeee0beb3ab8dd3c00a2a105d52668f67972623e49d8": []
     },
+    "struct:BackGestureEvent": {
+      "7e8d06882e2e6a37985aa1b70e74d5af631d6f7d0556e1bb2f170115e49469c5": [
+        "phase : BackGesturePhase",
+        "progress : f32",
+        "start_position : Point < Pixels >"
+      ]
+    },
     "struct:BackdropBlur": {
       "2cf92180b77ea4fb341fb23eed8965d666319fff45b5890820216627f3e0905d": [
         "blur_radius : ScaledPixels",
@@ -7596,6 +7651,9 @@
         "modifiers : Modifiers"
       ]
     },
+    "struct:KeystrokeDisplay": {
+      "5ed57d75e8ce37bb9494a0dc3d36fa80d67802eafaa9445ab52ac1e63bf52e8d": []
+    },
     "struct:KeystrokeEvent": {
       "397ec1e0392cc1e4fa51f90ede5c597424a6ce052d5a7f9cbde5b2bc30a216a7": [
         "action : Option < Box < dyn Action > >",
@@ -8523,6 +8581,12 @@
     "struct:PlatformFrameSignal": {
       "3c244cc9ec48635d574074d88c93696ba8e0ddf75ebb1951def340236d2edc9c": []
     },
+    "struct:PlatformInfo": {
+      "0acaf25b4ec33bf934e36bc37537789f6fba08506115817a0cdd5218cf9003bd": [
+        "os : OperatingSystem",
+        "target : PlatformTarget"
+      ]
+    },
     "struct:PlatformInputHandler": {
       "3db3f7bfe35dbdca79ee4ad50d2d9fa2be1babcdeb828e36e1675377dacf6eae": []
     },
@@ -9178,6 +9242,15 @@
         "thumb_ratio : f64",
         "vertical : bool",
         "viewport_size : Pixels"
+      ]
+    },
+    "struct:ScrollEvent": {
+      "c4a7da2355f602fa71972aecc3aae81c5e06bddd02aab97573736a3f04710710": [
+        "delta : ScrollDelta",
+        "modifiers : Modifiers",
+        "position : Point < Pixels >",
+        "source : ScrollSource",
+        "touch_phase : TouchPhase"
       ]
     },
     "struct:ScrollHandle": {
@@ -11190,6 +11263,11 @@
     },
     "struct:WindowInsets": {
       "753599957cab1463876528edd25ddda2bb9ec55bcd43f00b74e9944fc055f826": [
+        "ime : Edges < Pixels >",
+        "safe_area : Edges < Pixels >"
+      ],
+      "ea85f4eace1f5bc5c7fc8684a0d83567bf5b80a8f94ce3981b463a55900cce9b": [
+        "corner_radii : Corners < Pixels >",
         "ime : Edges < Pixels >",
         "safe_area : Edges < Pixels >"
       ]
@@ -16208,6 +16286,56 @@
         "fn tab_stop(mut self, bool)-> Self",
         "fn track_focus(mut self, & FocusHandle)-> Self",
         "fn window_control_area(mut self, WindowControlArea)-> Self"
+      ],
+      "d84df1672062fa8308da058d7dbfccc9123dbb085681251433a039d65d458db2": [
+        "[cfg (any (test , all (debug_assertions , feature = \"test-support\")))] fn debug_selector(mut self, impl FnOnce () -> String)-> Self",
+        "[cfg (not (any (test , all (debug_assertions , feature = \"test-support\"))))] fn debug_selector(self, impl FnOnce () -> String)-> Self",
+        "fn block_mouse_except_scroll(mut self)-> Self",
+        "fn can_drop(mut self, impl Fn (& dyn Any , & mut Window , & mut App) -> bool + 'static)-> Self",
+        "fn capture_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_any_mouse_up(mut self, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn capture_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn drag_over<S : 'static>(mut self, impl 'static + Fn (StyleRefinement , & S , & mut Window , & mut App) -> StyleRefinement)-> Self",
+        "fn focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn focus_visible(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn group(mut self, impl Into < SharedString >)-> Self",
+        "fn group_drag_over<S : 'static>(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn group_hover(mut self, impl Into < SharedString >, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn hover(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Self",
+        "fn id(mut self, impl Into < ElementId >)-> Stateful < Self >",
+        "fn in_focus(mut self, impl FnOnce (StyleRefinement) -> StyleRefinement)-> Selfwhere Self : Sized ,",
+        "fn interactivity(& mut self)-> & mut Interactivity",
+        "fn key_context<C , E>(mut self, C)-> Selfwhere C : TryInto < KeyContext , Error = E > , E : std :: fmt :: Display ,",
+        "fn occlude(mut self)-> Self",
+        "fn on_action<A : Action>(mut self, impl Fn (& A , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_any_mouse_down(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_back_gesture(mut self, impl Fn (& BackGestureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_boxed_action(mut self, & dyn Action, impl Fn (& dyn Action , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drag_move<T : 'static>(mut self, impl Fn (& DragMoveEvent < T > , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_drop<T : 'static>(mut self, impl Fn (& T , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_file_drop_exit(mut self, impl Fn (& FileDropEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_down(mut self, impl Fn (& KeyDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_key_up(mut self, impl Fn (& KeyUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_modifiers_changed(mut self, impl Fn (& ModifiersChangedEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down(mut self, MouseButton, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_down_out(mut self, impl Fn (& MouseDownEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_exit(mut self, impl Fn (& MouseExitEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_move(mut self, impl Fn (& MouseMoveEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_pressure(mut self, impl Fn (& MousePressureEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_mouse_up_out(mut self, MouseButton, impl Fn (& MouseUpEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_pinch(mut self, impl Fn (& PinchEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_scroll(mut self, impl Fn (& ScrollEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn on_scroll_wheel(self, impl Fn (& ScrollEvent , & mut Window , & mut App) + 'static)-> Self",
+        "fn tab_group(mut self)-> Self",
+        "fn tab_index(mut self, isize)-> Self",
+        "fn tab_stop(mut self, bool)-> Self",
+        "fn track_focus(mut self, & FocusHandle)-> Self",
+        "fn window_control_area(mut self, WindowControlArea)-> Self"
       ]
     },
     "trait:Interpolate": {
@@ -17127,6 +17255,86 @@
         "fn set_cursor_style(& self, CursorStyle)",
         "fn set_dock_menu(& self, Vec < MenuItem >, & Keymap)",
         "fn set_menus(& self, Vec < Menu >, & Keymap)",
+        "fn should_auto_hide_scrollbars(& self)-> bool",
+        "fn show_system_notification(& self, SystemNotification)",
+        "fn text_system(& self)-> Arc < dyn PlatformTextSystem >",
+        "fn thermal_state(& self)-> ThermalState",
+        "fn unhide_other_apps(& self)",
+        "fn update_jump_list(& self, Vec < MenuItem >, Vec < SmallVec < [PathBuf ; 2] > >)-> Task < Vec < SmallVec < [PathBuf ; 2] > > >",
+        "fn window_appearance(& self)-> WindowAppearance",
+        "fn window_stack(& self)-> Option < Vec < AnyWindowHandle > >",
+        "fn write_credentials(& self, & str, & str, & [u8])-> Task < Result < () > >",
+        "fn write_to_clipboard(& self, ClipboardItem)"
+      ],
+      "9ed29709e79e2a14fc6e9ad6c3c4abef45b725b29833d857e4ad1fe52574f8bd": [
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn read_from_primary(& self)-> Option < ClipboardItem >",
+        "[cfg (any (target_os = \"linux\" , target_os = \"freebsd\"))] fn write_to_primary(& self, ClipboardItem)",
+        "[cfg (target_os = \"macos\")] fn read_from_find_pasteboard(& self)-> Option < ClipboardItem >",
+        "[cfg (target_os = \"macos\")] fn write_credentials_if_not_exists(& self, & str, & str, & [u8])-> Task < Result < bool > >",
+        "[cfg (target_os = \"macos\")] fn write_to_find_pasteboard(& self, ClipboardItem)",
+        "fn activate(& self, bool)",
+        "fn active_window(& self)-> Option < AnyWindowHandle >",
+        "fn add_recent_document(& self, & Path)",
+        "fn app_path(& self)-> Result < PathBuf >",
+        "fn background_executor(& self)-> BackgroundExecutor",
+        "fn button_layout(& self)-> Option < WindowButtonLayout >",
+        "fn can_select_mixed_files_and_dirs(& self)-> bool",
+        "fn compositor_name(& self)-> & 'static str",
+        "fn delete_credentials(& self, & str)-> Task < Result < () > >",
+        "fn dismiss_system_notification(& self, & str)",
+        "fn displays(& self)-> Vec < Rc < dyn PlatformDisplay > >",
+        "fn foreground_executor(& self)-> ForegroundExecutor",
+        "fn gestures(& self)-> Option < Rc < dyn PlatformGestures > >",
+        "fn get_menus(& self)-> Option < Vec < OwnedMenu > >",
+        "fn graphical_environment(& self)-> Option < GraphicalEnvironment >",
+        "fn hide(& self)",
+        "fn hide_cursor_until_mouse_moves(& self)",
+        "fn hide_other_apps(& self)",
+        "fn is_cursor_visible(& self)-> bool",
+        "fn is_screen_capture_supported(& self)-> bool",
+        "fn keyboard_layout(& self)-> Box < dyn PlatformKeyboardLayout >",
+        "fn keyboard_mapper(& self)-> Rc < dyn PlatformKeyboardMapper >",
+        "fn on_app_lifecycle(& self, Box < dyn FnMut (AppLifecyclePhase) >)",
+        "fn on_app_menu_action(& self, Box < dyn FnMut (& dyn Action) >)",
+        "fn on_displays_changed(& self, Box < dyn FnMut () >)",
+        "fn on_keyboard_layout_change(& self, Box < dyn FnMut () >)",
+        "fn on_memory_warning(& self, Box < dyn FnMut () >)",
+        "fn on_open_urls(& self, Box < dyn FnMut (Vec < String >) >)",
+        "fn on_quit(& self, Box < dyn FnMut () -> bool >)",
+        "fn on_reopen(& self, Box < dyn FnMut () >)",
+        "fn on_system_notification_response(& self, Box < dyn FnMut (SystemNotificationResponse) >)",
+        "fn on_system_sleep(& self, Box < dyn FnMut () >)",
+        "fn on_system_wake(& self, Box < dyn FnMut () >)",
+        "fn on_thermal_state_change(& self, Box < dyn FnMut () >)",
+        "fn on_validate_app_menu_command(& self, Box < dyn FnMut (& dyn Action) -> bool >)",
+        "fn on_will_open_app_menu(& self, Box < dyn FnMut () >)",
+        "fn open_url(& self, & str)",
+        "fn open_window(& self, AnyWindowHandle, WindowParams)-> anyhow :: Result < Box < dyn PlatformWindow > >",
+        "fn open_with_system(& self, & Path)",
+        "fn path_for_auxiliary_executable(& self, & str)-> Result < PathBuf >",
+        "fn perform_dock_menu_action(& self, usize)",
+        "fn platform_info(& self)-> PlatformInfo",
+        "fn prevent_idle_sleep(& self, & str)-> Task < Result < ActivityGuard > >",
+        "fn primary_display(& self)-> Option < Rc < dyn PlatformDisplay > >",
+        "fn prompt_for_new_path(& self, & Path, Option < & str >)-> oneshot :: Receiver < Result < Option < PathBuf > > >",
+        "fn prompt_for_paths(& self, PathPromptOptions)-> oneshot :: Receiver < Result < Option < Vec < PathBuf > > > >",
+        "fn quit(& self)",
+        "fn read_credentials(& self, & str)-> Task < Result < Option < (String , Vec < u8 >) > > >",
+        "fn read_from_clipboard(& self)-> Option < ClipboardItem >",
+        "fn read_from_clipboard_async(& self)-> Task < Result < Option < ClipboardItem > , ClipboardReadError > >",
+        "fn register_url_scheme(& self, & str)-> Task < Result < () > >",
+        "fn request_windowing(& self, WindowingRequest)-> Task < anyhow :: Result < () > >",
+        "fn restart(& self, Option < PathBuf >, Vec < OsString >)",
+        "fn reveal_path(& self, & Path)",
+        "fn run(& self, Box < dyn 'static + FnOnce () >)",
+        "fn screen_capture_sources(& self)-> oneshot :: Receiver < anyhow :: Result < Vec < Rc < dyn ScreenCaptureSource > > > >",
+        "fn set_activation_policy(& self, ActivationPolicy)",
+        "fn set_app_identity(& self, & str, & str)",
+        "fn set_cursor_style(& self, CursorStyle)",
+        "fn set_dock_menu(& self, Vec < MenuItem >, & Keymap)",
+        "fn set_initial_windowing(& self, WindowingRequest)",
+        "fn set_menus(& self, Vec < Menu >, & Keymap)",
+        "fn set_window_appearance(& self, Option < WindowAppearance >)",
         "fn should_auto_hide_scrollbars(& self)-> bool",
         "fn show_system_notification(& self, SystemNotification)",
         "fn text_system(& self)-> Arc < dyn PlatformTextSystem >",
