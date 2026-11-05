@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-11-02T09:10:12+00:00",
+  "dataset_synced_at": "2026-11-05T00:21:28+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -16373,6 +16373,11 @@
         "fn tab_stop(mut self, bool)-> Self",
         "fn track_focus(mut self, & FocusHandle)-> Self",
         "fn window_control_area(mut self, WindowControlArea)-> Self"
+      ]
+    },
+    "trait:InteractiveElementExt": {
+      "d43323cbd1f9298018de40538f4665828c2cb2ef77e9ef3a07734aace523f6a3": [
+        "fn on_drag_with<T , W>(mut self, MouseButton, T, impl Fn (& T , Point < Pixels > , & mut Window , & mut App) -> Entity < W > + 'static)-> Selfwhere T : 'static , W : 'static + Render ,"
       ]
     },
     "trait:Interpolate": {
