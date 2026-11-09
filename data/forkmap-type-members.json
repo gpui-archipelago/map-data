@@ -1,6 +1,6 @@
 {
   "schema": "gocar.forkmap.typemembers.v2",
-  "dataset_synced_at": "2026-11-05T00:21:28+00:00",
+  "dataset_synced_at": "2026-11-09T05:09:26+00:00",
   "dataset_schema": "gocar.contract.v0",
   "vectors": {
     "enum:AbsoluteLength": {
@@ -6802,6 +6802,12 @@
       "603e1a63ecaa21725c032039020cd50d82991531ea9fea9892f7819c270795e3": [
         "Rc < dyn RendererFactory >"
       ]
+    },
+    "struct:DynamicTexture": {
+      "817281279e01eda3f8b224368e7d20ae11141e11473e45c1d5b7956b4d1282b8": []
+    },
+    "struct:DynamicTextureId": {
+      "4ac12edef67a5ab9c9c80cb2ddd3bc1fb29e8dd910a3bc13e1f6495e6fa36174": []
     },
     "struct:Easing": {
       "1e921f0e8cdedfb435c4341c8597ab8c854157da12a3191375c49af8aa0742f8": []
@@ -15092,6 +15098,11 @@
         "fn along(& self, Axis)-> Self :: Unit",
         "fn apply_along(& self, Axis, impl FnOnce (Self :: Unit) -> Self :: Unit)-> Self",
         "type Unit"
+      ],
+      "b23ea37cf607464d6aca89d0a69f781af4304fb53b47d9e889bb376e14f1748e": [
+        "fn along(& self, Axis)-> Self :: Unit",
+        "fn apply_along(& self, Axis, impl Fn (Self :: Unit) -> Self :: Unit)-> Self",
+        "type Unit"
       ]
     },
     "trait:AnimationExt": {
@@ -15242,6 +15253,13 @@
       "54af4990c041cf7dd32344f832957b2edd95d7840431e7c0fc2fb1949052b85c": [
         "fn with_easing(self, impl Fn (f32) -> f32 + 'static)-> Motion",
         "fn with_spring(self, SpringConfig)-> Motion"
+      ]
+    },
+    "trait:DynamicTexturePlatform": {
+      "420936c48062f035458af57450dfc6fc99b6c0fc8ba072df6093bcf9271646f0": [
+        "fn create_texture(& self, DynamicTextureId, crate :: Size < DevicePixels >, & [u8])-> Result < () >",
+        "fn remove_texture(& self, DynamicTextureId)",
+        "fn update_texture(& self, DynamicTextureId, Bounds < DevicePixels >, & [u8])-> Result < () >"
       ]
     },
     "trait:Element": {
